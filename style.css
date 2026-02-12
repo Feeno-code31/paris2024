@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.presentation {
+    margin: 0;
+    background-image: url("tgsogpu8rgvos7ugwgro.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.home_story {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.flamme {
+    text-align: center;
+    width: 200px;
+    text-align: center;
+}
+
+.paris_2024 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.paris_2024 .paris h1{
+    display: block;
+    font-size: 130px;
+    margin: 0;
+    color: blue;
+}
+
+
+.paris_2024 .date_2024 h1{
+    display: block;
+    font-size: 130px;
+    margin: 0;
+    color: red;
+}
+
+
+.paris_2024_intro span {
+    display: block;
+    margin: 0;
+    font-size: 30px;
+    color: white;
+} 
+
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+}
+
+nav ul li {
+    padding: 20px;
+    color: white;
+}
+
+.infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.info {
+    padding: 20px;
+    border-radius: 10px;
+    background: #ede8da;
+    background: linear-gradient(141deg, rgba(237, 232, 218, 1) 19%, rgba(229, 227, 224, 1) 38%, rgba(221, 221, 230, 1) 62%, rgba(220, 221, 230, 1) 64%, rgba(217, 201, 145, 1) 76%, rgba(255, 255, 255, 1) 91%);
+}
+
+.info h3 {
+    display: block;
+    font-size: 40px;
+    margin: 10px 0 0px 0;
+}
+
+.info span {
+    display: block;
+    font-size: 15px;
+}
+
+.image_info {
+    display: block;
+    width: 250px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.disciplines, .sites {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    background-color: azure;
+}
+
+.sites {
+    background-color: rgb(0, 27, 53);
+    color: white;
+    overflow: hidden;
+}
+
+.div_disciplines, .div_sites{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.disciplines {
+    display: block;
+    border: 1px solid transparent;
+    background-image: url("defile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.description_disciplines_entete {
+    display: block;
+    margin-top: 30px;
+}
+
+.description_disciplines_entete span {
+    display: block;
+    border: 1px solid rgba(242, 214, 2, 1);
+    width: 200px;
+    margin: 40px auto 0;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #454020;
+    color: rgba(242, 214, 2, 1);
+}
+
+.description_disciplines_entete h2 {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.discipline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 200px;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+.voir_tous_disciplines, .voir_tous_sites {
+    display: block;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    box-sizing: border-box;
+    width: 270px;
+    margin: 30px auto;
+    background-color: rgb(0, 27, 53)
+}
+
+.voir_tous_sites {
+    background: #ffaa00;
+    background: linear-gradient(304deg, rgba(255, 170, 0, 1) 50%, rgba(242, 192, 12, 1) 61%, rgba(237, 210, 135, 1) 100%);
+}
+
+.discipline:hover {
+    transform: scale(1.1);
+
+}
+
+#natation {
+    background-image: url(natation.jpg);
+
+}
+
+#gymnastique {
+    background-image: url(gymnastique.jpg);
+}
+
+#patinage {
+    background-image: url(patinage.jpg);
+
+}
+
+#athletisme {
+    background-image: url(athletisme.jpg);
+}
+
+#football {
+    background-image: url(football.jpg);
+}
+
+#escrime {
+    background-image: url(escrime.jpg);
+}
+
+#natation, #escrime, #football, #athletisme, #gymnastique, #patinage,
+#stade_de_france, #tour_eiffel, #grand_palais {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.description_sites_entete span {
+    display: block;
+    border: 1px solid rgba(242, 214, 2, 1);
+    width: 200px;
+    margin: 40px auto 0;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #454020;
+    color: rgba(242, 214, 2, 1);
+}
+
+.description_sites_entete h2 {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.site {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 450px;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+.text_site {
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+    align-items: first baseline;
+}
+
+.location_site {
+    font-size: 15px;
+    color: yellow;
+    margin: 0;
+}
+
+.site_name {
+    font-size: 25px;
+    margin: 2px;
+    font-weight: bold;
+}
+
+.text_site span {
+    font-size: 15px;
+}
+
+#stade_de_france {
+    background-image: url("stade_de_france.jpg");
+}
+#grand_palais {
+    background-image: url("grand_palais.jpg");
+}
+#tour_eiffel {
+    background-image: url("tour_eiffel.jpg");
+}
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 40px;              
+    padding: 10px;
+    background-color: #f5f5f5; 
+    background: #ede8da;
+    background: linear-gradient(141deg, rgba(237, 232, 218, 1) 19%, rgba(229, 227, 224, 1) 38%, rgba(221, 221, 230, 1) 62%, rgba(220, 221, 230, 1) 64%, rgba(217, 201, 145, 1) 76%, rgba(255, 255, 255, 1) 91%);
+}
+
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer > div span {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+
+.logo_jo_2024 img {
+    display: block;
+    text-align: center;
+    width: 300px;
+}

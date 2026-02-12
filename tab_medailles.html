@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="classement_pays.css">
+    <script src="https://kit.fontawesome.com/7d821e118f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"
+    />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Paris 2024</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#">Médailles</a></li>
+            <li><a href="sports.html">Disciplines</a></li>
+            <li><a href="sites.html">Sites</a></li>
+        </ul>
+    </nav>
+
+    <section class="tab_medailles_presentation">
+        <figure class="image_medal">
+            <img src="disciplines-medal.avif" alt="Médailles des Jeux Olympiques Paris 2024">
+        </figure>
+        
+        <div class="classement_description">
+            <h1>TABLEAU DES<br>MÉDAILLES</h1>
+            <p>
+                Découvrez le tableau officiel des médailles des Jeux Olympiques de Paris 2024 et suivez l’évolution du classement des nations selon leurs performances, avec le détail des médailles d’or, d’argent et de bronze remportées.
+            </p>
+
+            <p class="redirection_classement">
+                <a href="#classement">Voir le tableau</a>
+            </p>
+        </div>
+    </section>
+
+
+    <div class="medailles">
+        <div class="medaille" id="gold_medal">
+            <p>200</p>
+            <p>Or</p>
+        </div>
+
+        <div class="medaille" id="silver_medal">
+            <p>190</p>
+            <p>Argent</p>
+        </div>
+
+        <div class="medaille" id="bronze_medal">
+            <p>200</p>
+            <p>Bronze</p>
+        </div>
+    </div>
+
+   
+
+    
+
+    <div class="classement" id="classement">
+        <div class="classement_sous header">
+            <div class="numero_pays">
+                <span>#</span>
+            </div>
+
+            <div class="nom_pays">
+                <span>Pays</span>
+            </div>
+
+            <div class="nb_gold_medals">
+                <span>Or</span>
+            </div>
+
+            <div class="nb_silver_medals">
+                <span>Argent</span>
+            </div>
+
+            <div class="nb_bronze_medals">
+                <span>Bronze</span> 
+            </div> 
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <span>Paris 2024</span>
+            <span>Jeux Olympiques</span>
+        </div>
+
+        <div class="logo_jo_2024">
+            <img src="logo.png" alt="">
+        </div>
+
+        <div>
+            <span>26 Juillet - 11 Août 2024 <hr><i class="fa-solid fa-location-dot" style="color: #FFD43B;"></i> Paris, France</span>
+        </div>
+    </footer>
+
+    <script type="module" src="classement.js"></script>
+
+</body>
+</html>

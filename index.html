@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7d821e118f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="presentation">
+        <nav>
+            <ul>
+                <li><a href="index.html">Paris 2024</a></li>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="tab_medailles.html">Médailles</a></li>
+                <li><a href="sports.html">Disciplines</a></li>
+                <li><a href="sites.html">Sites</a></li>
+            </ul>
+        </nav>
+
+        <div class="home_story">
+            <div class="paris_2024_intro">
+                <div class="paris_2024">
+                    <div class="paris"><h1>Paris</h1></div>
+                    <div class="flamme_class">
+                        <img class="flamme" src="logo.png" alt="">
+                    </div>
+                    <div class="date_2024"><h1>2024</h1></div>
+                </div>
+
+                <span>Découvrez tout sur les Jeux Olympiques d'été <br> les plus
+                    spectaculaires de l'histoire
+                </span>
+            </div>
+        </div>
+
+        
+    </div>
+    
+    <div class="infos">
+        <div class="info">
+            <img src="athletes_ensemble.jpg" alt="" class="image_info">
+            <h3>10,500</h3>
+            <span>Athlètes</span>
+        </div>
+
+        <div class="info">
+            <img src="Epreuves_ensembles.jpg" alt="" class="image_info">
+            <h3>329</h3>
+            <span>Epreuves</span>
+        </div>
+
+        <div class="info">
+            <img src="sites_ensemble.jpg" alt="" class="image_info">
+            <h3>42</h3>
+            <span>Sites</span>
+        </div>
+
+        <div class="info">
+            <img src="sports_ensemble.jpg" alt="" class="image_info">
+            <h3>32</h3>
+            <span>Sports</span>
+        </div>
+    </div>
+
+    <div class="disciplines">
+        <div class="description_disciplines_entete">
+            <span>DISCIPLINES</span>
+            <h2>Sports Olympiques</h2>
+        </div>
+
+        <div class="div_disciplines">
+            <div class="discipline" id="athletisme">
+                <span>Athlétisme</span>
+            </div>
+            
+            <div class="discipline" id="natation"> 
+                <span>Natation</span>
+            </div>
+
+            <div class="discipline" id="gymnastique">
+                <span>Gymnastique</span>
+            </div>
+
+            <div class="discipline" id="football">
+                <span>Football</span>
+            </div>
+
+            <div class="discipline" id="escrime">
+                <span>Escrime</span>
+            </div>
+
+            <div class="discipline" id="patinage">
+                <span>Patinage</span>
+            </div>
+        </div>
+
+        <div class="voir_tous_disciplines">Voir tous les disciplines    <i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+    </div>
+
+    <div class="sites">
+        <div class="description_sites_entete">
+            <span>LIEUX ICONIQUES</span>
+            <h2>Sites Olympiques</h2>
+        </div>
+        
+        <div class="div_sites">
+            <div class="site" id="stade_de_france">
+                <div class="text_site">
+                    <span class="location_site"><i class="fa-solid fa-location-dot" style="color: #FFD43B;"></i>    Saint-Denis</span>
+                    <p class="site_name">Stade de France</p>
+                    <span>Football</span>
+                </div>
+            </div>
+
+            <div class="site" id="tour_eiffel">
+                <div class="text_site">
+                    <span class="location_site"><i class="fa-solid fa-location-dot" style="color: #FFD43B;"></i>    Champs de Mars</span>
+                    <p class="site_name">Tour Eiffel</p>
+                    <span>Beach Volley</span>
+                </div>
+            </div>
+
+            <div class="site" id="grand_palais">
+                <div class="text_site">
+                    <span class="location_site"><i class="fa-solid fa-location-dot" style="color: #FFD43B;"></i>    Paris</span>
+                    <p class="site_name">Grand Palais</p>
+                    <span>Escrime</span>
+                </div>  
+            </div>
+        </div>
+        <div class="voir_tous_sites">Découvrir tous les sites   <i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i></div>
+    </div>
+
+
+    <footer>
+        <div>
+            <span>Paris 2024</span>
+            <span>Jeux Olympiques</span>
+        </div>
+
+        <div class="logo_jo_2024">
+            <img src="logo.png" alt="">
+        </div>
+
+        <div>
+            <span>26 Juillet - 11 Août 2024 <hr><i class="fa-solid fa-location-dot" style="color: #FFD43B;"></i> Paris, France</span>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector(".flamme").addEventListener("click", () => {
+            window.location = "tab_medailles.html";
+        })
+    </script>
+</body>
+</html>

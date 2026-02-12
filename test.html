@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="list">Voici la liste</div>
+
+    <script src="sites_infos.js"></script>
+    <script src="pays.js"></script>
+    
+    <script>
+        const list = document.getElementById("list");
+        sites_infos.forEach(element => {
+            const li = document.createElement("div");
+            li.className = "nom";
+            for(const field in element) {
+                li.innerHTML += `<p>${field} : ${element[field]}</p><br>`;
+            }
+            li.innerHTML += `<hr>`
+            list.appendChild(li);
+        });
+    </script>
+    
+</body>
+</html>
+
+
+<!--
+<script src="medalists.js">
+        fetch("medalists.json")
+            .then(response => response.json)
+            .then(names => {
+                const list = document.getElementById("list");
+                names.forEach(element => {
+                    const li = document.createElement("div");
+                    li.className = "nom";
+                    li.textContent = element;
+                    list.append(li);
+                    console.log("a");
+                });
+            })
+        .catch(error => console.error(error));
+    </script>
+-->

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="disciplines.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7d821e118f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Paris 2024</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#">Médailles</a></li>
+            <li><a href="sports.html">Disciplines</a></li>
+            <li><a href="sites.html">Sites</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="tab_medailles_presentation">
+        <figure class="image_medal">
+            <img src="disciplines-medal.avif" alt="Médailles des Jeux Olympiques Paris 2024">
+        </figure>
+        
+        <div class="classement_description">
+            <h1>TABLEAU DES<br>MÉDAILLES</h1>
+            <p>
+                Découvrez le tableau officiel des médailles des Jeux Olympiques de Paris 2024 et suivez l’évolution du classement des nations selon leurs performances, avec le détail des médailles d’or, d’argent et de bronze remportées.
+            </p>
+
+            <p class="redirection_classement">
+                <a href="#classement">Voir le tableau</a>
+            </p>
+        </div>
+    </section>
+
+    
+    <div class="sports" id="sports">
+
+    </div>
+
+    <footer>
+        <div>
+            <span>Paris 2024</span>
+            <span>Jeux Olympiques</span>
+        </div>
+
+        <div>
+            <span>26 Juillet - 11 Août 2024 • Paris, France</span>
+        </div>
+    </footer>
+
+
+    <script src="disciplines.js"></script>
+    <script>
+        const sports = document.getElementById("sports");
+        disciplines.forEach(element => {
+            let sport = document.createElement("div");
+            sport.className = "sport";
+            sport.setAttribute("id", element);
+
+            sport.innerHTML = `<span>${element}<span/>`;
+            sports.appendChild(sport);
+        })
+    </script>
+</body>
+</html>

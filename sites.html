@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href= "sites.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Paris 2024</li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="tab_medailles.html">Médailles</a></li>
+            <li><a href="sports.html">Disciplines</a></li>
+            <li><a href="#">Sites</a></li>
+        </ul>
+    </nav>
+
+    <section class="tab_medailles_presentation">
+        <figure class="image_medal">
+            <img src="tgsogpu8rgvos7ugwgro.avif" alt="Médailles des Jeux Olympiques Paris 2024">
+        </figure>
+        
+        <div class="classement_description">
+            <h1>TABLEAU DES<br>MÉDAILLES</h1>
+            <p>
+                Découvrez le tableau officiel des médailles des Jeux Olympiques de Paris 2024 et suivez l’évolution du classement des nations selon leurs performances, avec le détail des médailles d’or, d’argent et de bronze remportées.
+            </p>
+
+            <p class="redirection_classement">
+                <a href="#classement">Voir le tableau</a>
+            </p>
+        </div>
+    </section>
+
+    <div>
+        <span>Sites iconiques</span>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div>
+        <span>Tous les sites</span>
+        <div id="list_sites">
+
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <span>Paris 2024</span>
+            <span>Jeux Olympiques</span>
+        </div>
+
+        <div>
+            <span>26 Juillet - 11 Août 2024 • Paris, France</span>
+        </div>
+    </footer>
+
+
+    <script src="sites_infos.js"></script>
+    
+    <script>
+        const list = document.getElementById("list_sites");
+        sites_infos.forEach(element => {
+            const li = document.createElement("div");
+            li.className = "nom";
+            li.textContent = element["nom_site"]
+            li.innerHTML += `<p>${element["sports"]}</p>`
+            list.appendChild(li);
+        });
+    </script>
+</body>
+</html>
