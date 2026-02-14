@@ -141,9 +141,6 @@ li a {
 .disciplines {
     display: block;
     border: 1px solid transparent;
-    background-image: url("defile.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .description_disciplines_entete {
@@ -172,12 +169,13 @@ li a {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    height: 200px;
+    height: 225px;
     padding: 20px;
     border: 1px solid;
     border-radius: 20px;
     font-size: 30px;
     color: white;
+    transition: transform 1s ease;
 }
 
 .voir_tous_disciplines, .voir_tous_sites {
@@ -200,7 +198,6 @@ li a {
 
 .discipline:hover {
     transform: scale(1.1);
-
 }
 
 #natation {
