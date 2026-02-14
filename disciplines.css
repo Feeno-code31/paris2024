@@ -117,6 +117,14 @@ nav ul li a {
                 box-shadow 0.3s ease;
 }
 
+.sport:hover {
+    border: none;
+    transform: scale(1.1);
+    border-radius: 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
 .discipline_div_descri  {
     display: flex;
     justify-content: center;
@@ -124,6 +132,7 @@ nav ul li a {
     width: 100%;
     gap: 1.5em;
 }
+
 
 
 .sport:hover .discipline_div_descri {
@@ -147,19 +156,12 @@ nav ul li a {
 }
 
 
-
-.sport:hover {
-    transform: scale(1.1);
-    border-radius: 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-
 .sport span {
     display: block;
     margin-left: 20px;
     font-size: 20px;
     font-weight: bold;
+    padding: 5px;
 }
 
 
