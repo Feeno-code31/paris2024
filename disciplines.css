@@ -139,7 +139,13 @@ nav ul li a {
 .sport:hover .discipline_div_descri .voir_discipline {
     visibility: visible;
     background-color: rgb(203, 155, 155);
+    border-radius: 5px;
 }
+
+.sport:hover .discipline_div_descri .voir_discipline:hover {
+    background-color: rgb(216, 99, 99);
+}
+
 
 
 .sport:hover {
