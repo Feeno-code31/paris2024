@@ -23,21 +23,28 @@
 
     <section class="tab_medailles_presentation">
         <figure class="image_medal">
-            <img src="disciplines-medal.avif" alt="Médailles des Jeux Olympiques Paris 2024">
+            <img src="escrime.jpg" alt="Disciplines des Jeux Olympiques Paris 2024">
         </figure>
         
         <div class="classement_description">
-            <h1>TABLEAU DES<br>MÉDAILLES</h1>
+            <h1>DISCIPLINES DES<br>JEUX OLYMPIQUES</h1>
             <p>
-                Découvrez le tableau officiel des médailles des Jeux Olympiques de Paris 2024 et suivez l’évolution du classement des nations selon leurs performances, avec le détail des médailles d’or, d’argent et de bronze remportées.
-            </p>
-
-            <p class="redirection_classement">
-                <a href="#classement">Voir le tableau</a>
+                Explorez l'ensemble des disciplines sportives des Jeux Olympiques de Paris 2024. 
+                Des sports traditionnels comme l'athlétisme, la natation et le football, 
+                aux disciplines urbaines et modernes telles que le skateboard, le surf 
+                et l'escalade, découvrez la diversité des épreuves qui rythment la plus 
+                grande compétition sportive mondiale.
             </p>
         </div>
     </section>
 
+
+    <div class="description_fonctio_disciplines">
+        <p>Cliquer sur la discipline de votre choix pour découvrir tous les détails sur cette dernière. 
+            Les médaillés, les différentes épreuves, les sites où se sont tenus les 
+            épreuves, tout est disponible. 
+        </p>
+    </div>
     
     <div class="sports" id="sports">
 
@@ -49,8 +56,12 @@
             <span>Jeux Olympiques</span>
         </div>
 
+        <div class="logo_jo_2024">
+            <img src="logo.png" alt="">
+        </div>
+
         <div>
-            <span>26 Juillet - 11 Août 2024 • Paris, France</span>
+            <span>26 Juillet - 11 Août 2024 <hr><i class="fa-solid fa-location-dot" style="color: #FFD43B;"></i> Paris, France</span>
         </div>
     </footer>
 
@@ -61,9 +72,14 @@
         disciplines.forEach(element => {
             let sport = document.createElement("div");
             sport.className = "sport";
-            sport.setAttribute("id", element);
-
-            sport.innerHTML = `<span>${element}<span/>`;
+            sport.innerHTML = `
+                                <div class="discipline_div_descri">
+                                    <span class="discipline_name">${element}</span>
+                                    <div class="voir_discipline">
+                                        <span>Voir la discipline</span>
+                                    </div>
+                                </div>
+                            `;
             sports.appendChild(sport);
         })
     </script>
