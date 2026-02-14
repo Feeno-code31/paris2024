@@ -108,7 +108,7 @@ nav ul li a {
     align-items: flex-end;
     border: 1px solid black;
     border-radius: 20px;
-    background-image: url("photos/escrime.jpg");
+    background-image: url("escrime.jpg");
     background-position: center;
     background-size: cover;
     color: white;
