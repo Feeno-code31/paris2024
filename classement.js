@@ -588,104 +588,186 @@ function createFlagWithName(countryName) {
             </span>`;
 }
 
-const classement = document.getElementById("classement");
 
-classementJO.forEach((line, i) => {
-    const div_ligne = document.createElement("div");
-    div_ligne.className = "classement_sous"; // à définir en CSS
+function classement() {
+  const classement = document.getElementById("classement");
+  classement.innerHTML = "";
 
-    const num = document.createElement("div");
-    num.className = "numero_pays";
-    num.textContent = i + 1;
+  classementJO.forEach((line, i) => {
+      const div_ligne = document.createElement("div");
+      div_ligne.className = "classement_sous";
 
-    const nom = document.createElement("div");
-    nom.className = "nom_pays";
-    const drapeau_name = createFlagWithName(line.pays);
-    nom.innerHTML = drapeau_name;
+      const num = document.createElement("div");
+      num.className = "numero_pays";
+      num.textContent = i + 1;
 
-    const gMedals = document.createElement("div");
-    gMedals.className = "nb_gold_medals";
-    gMedals.textContent = line.gold;
+      const nom = document.createElement("div");
+      nom.className = "nom_pays";
+      const drapeau_name = createFlagWithName(line.pays);
+      nom.innerHTML = drapeau_name;
 
-    const sMedals = document.createElement("div");
-    sMedals.className = "nb_silver_medals";
-    sMedals.textContent = line.silver;
+      const gMedals = document.createElement("div");
+      gMedals.className = "nb_gold_medals";
+      gMedals.textContent = line.gold;
 
-    const bMedals = document.createElement("div");
-    bMedals.className = "nb_bronze_medals";
-    bMedals.textContent = line.bronze;
+      const sMedals = document.createElement("div");
+      sMedals.className = "nb_silver_medals";
+      sMedals.textContent = line.silver;
 
-    div_ligne.append(num, nom, gMedals, sMedals, bMedals);
-    classement.appendChild(div_ligne);
+      const bMedals = document.createElement("div");
+      bMedals.className = "nb_bronze_medals";
+      bMedals.textContent = line.bronze;
 
-    div_ligne.addEventListener("click", () => {
-        const page_infos_avant_click = classement.innerHTML;
-        classement.innerHTML = "";
-        classement.classList.add("pays_details");
-        classement.innerHTML = `<div id="retour_classement"><span>Retour au classement</span></div>
-                                <div class="info_pays_details"><h2>${line.pays}</h2>
-                                <span>Médailles remportées</span>
-                                </div>`;
-        
-        // Si on clique sur le retour au classement 
-        document.getElementById("retour_classement").addEventListener("click", () => {
-            classement.classList.remove("pays_details");
-            pays_stats.remove();
-            classement.innerHTML = page_infos_avant_click;
-        })
+      div_ligne.append(num, nom, gMedals, sMedals, bMedals);
+      classement.appendChild(div_ligne);
+
+      div_ligne.addEventListener("click", () => {
+          // Vide le classement et ajoute la classe détails
+          classement.innerHTML = "";
+          classement.classList.add("pays_details");
+
+          // Contenu de l'entête détails
+          classement.innerHTML = `
+              <div id="retour_classement"><span>Retour au classement</span></div>
+              <div class="info_pays_details">
+                  <h2>${line.pays}</h2>
+                  <span>Médailles remportées</span>
+              </div>
+          `;
+
+          // Crée pays_stats avant le listener retour
+          let pays_stats = document.createElement("div");
+          pays_stats.className = "pays_stats";
+
+          let or = document.createElement("div");
+          or.className = "or";
+          or.innerHTML = `<i>Icone</i>
+                          <p>${line.gold}</p>
+                          <p>Or</p>`;
+          pays_stats.appendChild(or);
+
+          let argent = document.createElement("div");
+          argent.className = "argent";
+          argent.innerHTML = `<i>Icone</i>
+                              <p>${line.silver}</p>
+                              <p>Argent</p>`;
+          pays_stats.appendChild(argent);
+
+          let bronze = document.createElement("div");
+          bronze.className = "bronze";
+          bronze.innerHTML = `<i>Icone</i>
+                              <p>${line.bronze}</p>
+                              <p>Bronze</p>`;
+          pays_stats.appendChild(bronze);
+
+          // Filtre médailles
+          let filtre_medailles = document.createElement("div");
+          filtre_medailles.className = "filtre_medailles";
+          filtre_medailles.innerHTML = `
+              <span>Filtrer par médaille</span>
+              <div class="choix_filtre_medailles">
+                  <div class="medaille_filtre_css" id="all_medailles">Toutes les médailles</div>
+                  <div class="medaille_filtre_css" id="or_filtre">Médaille Or</div>
+                  <div class="medaille_filtre_css" id="argent_filtre">Médaille Argent</div>
+                  <div class="medaille_filtre_css" id="bronze_filtre">Médaille Bronze</div>
+              </div>
+          `;
+
+          let section_medailles_filtre = document.createElement("div");
+          section_medailles_filtre.className = "section_medailles_filtre";
+          section_medailles_filtre.innerHTML = `<h2>Les données seront affichées ici</h2>`;
+
+          // Ajout au DOM
+          classement.appendChild(pays_stats);
+          classement.appendChild(filtre_medailles);
+          classement.appendChild(section_medailles_filtre);
+
+          // Listener retour
+          document.getElementById("retour_classement").addEventListener("click", () => {
+              // Supprime stats et classe détails avant de reconstruire
+              pays_stats.remove();
+              classement.classList.remove("pays_details");
+              classement();
+          });
+      });
+  });
+}
+
+function renderClassement() {
+    const classement = document.getElementById("classement");
+    classement.innerHTML =
+    `<div class="classement_sous header">
+        <div class="numero_pays">
+            <span>#</span>
+        </div>
+
+        <div class="nom_pays">
+            <span>Pays</span>
+        </div>
+
+        <div class="nb_gold_medals">
+            <span>Or</span>
+        </div>
+
+        <div class="nb_silver_medals">
+            <span>Argent</span>
+        </div>
+
+        <div class="nb_bronze_medals">
+            <span>Bronze</span> 
+        </div> 
+      </div>`;
+
+    classementJO.forEach((line, i) => {
+        const div_ligne = document.createElement("div");
+        div_ligne.className = "classement_sous";
+
+        const num = document.createElement("div");
+        num.className = "numero_pays";
+        num.textContent = i + 1;
+
+        const nom = document.createElement("div");
+        nom.className = "nom_pays";
+        const drapeau_name = createFlagWithName(line.pays);
+        nom.innerHTML = drapeau_name;
+
+        const gMedals = document.createElement("div");
+        gMedals.className = "nb_gold_medals";
+        gMedals.textContent = line.gold;
+
+        const sMedals = document.createElement("div");
+        sMedals.className = "nb_silver_medals";
+        sMedals.textContent = line.silver;
+
+        const bMedals = document.createElement("div");
+        bMedals.className = "nb_bronze_medals";
+        bMedals.textContent = line.bronze;
+
+        div_ligne.append(num, nom, gMedals, sMedals, bMedals);
+        classement.appendChild(div_ligne);
+
+        div_ligne.addEventListener("click", () => {
+            classement.innerHTML = "";
+            classement.classList.add("pays_details");
+
+            classement.innerHTML = `
+                <div id="retour_classement"><span>Retour au classement</span></div>
+                <div class="info_pays_details">
+                    <h2>${line.pays}</h2>
+                    <span>Médailles remportées</span>
+                </div>
+            `;
+
+            
+            document.getElementById("retour_classement").addEventListener("click", () => {
+                classement.classList.remove("pays_details");
+                renderClassement();
+            });
+        });
+    });
+}
 
 
-        let pays_stats = document.createElement("div");
-        pays_stats.className = "pays_stats";
-        
-
-
-        let or = document.createElement("div");
-        or.className = "or";
-        or.innerHTML = `<i>Icone<i/>
-                        <p>${line.gold}<p/>
-                        <p>Or<p/>`;
-        pays_stats.appendChild(or);
-
-        let argent = document.createElement("div");
-        argent.className = "argent";
-        argent.innerHTML = `<i>Icone<i/>
-                        <p>${line.silver}<p/>
-                        <p>Argent<p/>`;
-        pays_stats.appendChild(argent);
-
-        let bronze = document.createElement("div");
-        bronze.className = "bronze";
-        bronze.innerHTML = `<i>Icone<i/>
-                        <p>${line.bronze}<p/>
-                        <p>Bronze<p/>`;
-        pays_stats.appendChild(bronze); 
-        
-        
-        let filtre_medailles = document.createElement("div");
-        let section_medailles_filtre = document.createElement("div");
-        filtre_medailles.className = "filtre_medailles";
-        filtre_medailles.innerHTML = `
-            <span>Filtrer par médaille<span/>
-            <div class="choix_filtre_medailles">
-                <div class="medaille_filtre_css" id="all_medailles">Toutes les médailles</div>
-                <div class="medaille_filtre_css" id="or_filtre">Médaille Or</div>
-                <div class="medaille_filtre_css" id="argent_filtre">Médaille Argent</div>
-                <div class="medaille_filtre_css" id="bronze_filtre">Médaille Bronze</div>
-            </div>
-        `;
-
-        section_medailles_filtre.className ="section_medailles_filtre";
-        section_medailles_filtre.innerHTML = `
-            <h2>Les données seront affichées ici</h2>
-        `;
-
-        
-        
-        classement.appendChild(pays_stats);
-        classement.appendChild(filtre_medailles);
-        classement.appendChild(section_medailles_filtre);
-    })
-});
+renderClassement();
 
 

@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="disciplines.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7d821e118f.js" crossorigin="anonymous"></script>
-
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"
+    />
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="index.html">Paris 2024</a></li>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="tab_medailles.html">Médailles</a></li>
-            <li><a href="#">Disciplines</a></li>
+            <li><a href="#">Médailles</a></li>
+            <li><a href="sports.html">Disciplines</a></li>
             <li><a href="sites.html">Sites</a></li>
         </ul>
     </nav>
@@ -23,30 +26,70 @@
 
     <section class="tab_medailles_presentation">
         <figure class="image_medal">
-            <img src="escrime.jpg" alt="Disciplines des Jeux Olympiques Paris 2024">
+            <img src="athletes_ensemble.jpg" alt="Athlètes des Jeux Olympiques Paris 2024">
         </figure>
         
         <div class="classement_description">
-            <h1>DISCIPLINES DES<br>JEUX OLYMPIQUES</h1>
+            <h1>LISTE DES ATHLÈTES<br>PAR DISCIPLINE</h1>
             <p>
-                Explorez l'ensemble des disciplines sportives des Jeux Olympiques de Paris 2024. 
-                Des sports traditionnels comme l'athlétisme, la natation et le football, 
-                aux disciplines urbaines et modernes telles que le skateboard, le surf 
-                et l'escalade, découvrez la diversité des épreuves qui rythment la plus 
-                grande compétition sportive mondiale.
+                Retrouvez tous les athlètes participant aux Jeux Olympiques de Paris 2024. 
+                Filtrez-les par discipline, épreuve et type de médaille pour voir leurs performances et informations détaillées.
+            </p>
+
+            <p class="redirection_classement">
+                <a href="#sports">Voir les athlètes</a>
             </p>
         </div>
     </section>
 
 
-    <div class="description_fonctio_disciplines">
-        <p>Cliquer sur la discipline de votre choix pour découvrir tous les détails sur cette dernière. 
-            Les médaillés, les différentes épreuves, les sites où se sont tenus les 
-            épreuves, tout est disponible. 
-        </p>
+    <div class="option_select">
+        <select name="" id="discipline_select">
+            <option value="">Discipline</option>
+        </select>
+        <select name="" id="epreuve_select">
+            <option value="">Épreuve</option>
+        </select>
+        <select name="" id="medaille_select">
+            <option value="">Médaille</option>
+            <option value="Gold Medal">Médaille d'Or</option>
+            <option value="Silver Medal">Médaille d'Argent</option>
+            <option value="Bronze Medal">Médaille de Bronze</option>
+        </select>
+
+        <div class="div_button_select">
+            <button id="chercher_athletes">Rechercher</button>
+        </div>
     </div>
+
+
     
     <div class="sports" id="sports">
+
+    </div>
+
+    <div class="athletes" id="athletes">
+        <div class="entete_athlete">
+            <div class="nom_athlete">
+                <span>Nom</span>
+            </div>
+
+            <div class="genre">
+                <span>Genre</span>
+            </div>
+
+            <div class="nom_pays">
+                <span>Pays</span>
+            </div>
+
+            <div class="medal_type">
+                <span>Médaille</span>
+            </div>
+
+            <div class="epreuve">
+                <span>Épreuve</span> 
+            </div> 
+        </div>
 
     </div>
 
@@ -56,31 +99,240 @@
             <span>Jeux Olympiques</span>
         </div>
 
-        <div class="logo_jo_2024">
-            <img src="logo.png" alt="">
-        </div>
-
         <div>
-            <span>26 Juillet - 11 Août 2024 <hr><i class="fa-solid fa-location-dot" style="color: #FFD43B;"></i> Paris, France</span>
+            <span>26 Juillet - 11 Août 2024 • Paris, France</span>
         </div>
     </footer>
 
 
     <script src="disciplines.js"></script>
     <script>
+        const countryNameToCode = {
+            "United States": "us",
+            "China": "cn",
+            "Japan": "jp",
+            "Australia": "au",
+            "France": "fr",
+            "Netherlands": "nl",
+            "Great Britain": "gb",
+            "Korea": "kr",
+            "Italy": "it",
+            "Germany": "de",
+            "New Zealand": "nz",
+            "Canada": "ca",
+            "Uzbekistan": "uz",
+            "Hungary": "hu",
+            "Spain": "es",
+            "Sweden": "se",
+            "Kenya": "ke",
+            "Norway": "no",
+            "Ireland": "ie",
+            "Brazil": "br",
+            "IR Iran": "ir",
+            "Ukraine": "ua",
+            "Romania": "ro",
+            "Georgia": "ge",
+            "Belgium": "be",
+            "Bulgaria": "bg",
+            "Serbia": "rs",
+            "Czechia": "cz",
+            "Denmark": "dk",
+            "Azerbaijan": "az",
+            "Croatia": "hr",
+            "Cuba": "cu",
+            "Bahrain": "bh",
+            "Slovenia": "si",
+            "Chinese Taipei": "tw",
+            "Austria": "at",
+            "Hong Kong, China": "hk",
+            "Philippines": "ph",
+            "Indonesia": "id",
+            "Algeria": "dz",
+            "Israel": "il",
+            "Poland": "pl",
+            "Kazakhstan": "kz",
+            "South Africa": "za",
+            "Jamaica": "jm",
+            "Thailand": "th",
+            "AIN": "xx",
+            "Ethiopia": "et",
+            "Switzerland": "ch",
+            "Ecuador": "ec",
+            "Portugal": "pt",
+            "Greece": "gr",
+            "Egypt": "eg",
+            "Tunisia": "tn",
+            "Argentina": "ar",
+            "Uganda": "ug",
+            "Chile": "cl",
+            "Botswana": "bw",
+            "Saint Lucia": "lc",
+            "Dominican Republic": "do",
+            "Morocco": "ma",
+            "Guatemala": "gt",
+            "Pakistan": "pk",
+            "Dominica": "dm",
+            "Türkiye": "tr",
+            "Mexico": "mx",
+            "Colombia": "co",
+            "Armenia": "am",
+            "DPR Korea": "kp",
+            "Kyrgyzstan": "kg",
+            "Lithuania": "lt",
+            "India": "in",
+            "Republic of Moldova": "md",
+            "Kosovo": "xk",
+            "Fiji": "fj",
+            "Panama": "pa",
+            "Jordan": "jo",
+            "Cyprus": "cy",
+            "Mongolia": "mn",
+            "Tajikistan": "tj",
+            "Malaysia": "my",
+            "Albania": "al",
+            "Puerto Rico": "pr",
+            "Grenada": "gd",
+            "Côte d'Ivoire": "ci",
+            "Singapore": "sg",
+            "Peru": "pe",
+            "Qatar": "qa",
+            "Slovakia": "sk",
+            "Cabo Verde": "cv",
+            "EOR": "xx",
+            "Zambia": "zm"
+        };
+
+
+        function createFlagWithName(countryName) {
+            const code = countryNameToCode[countryName];
+            if (!code) return countryName; 
+
+            return  `
+                        <span class="fi fi-${code}"></span> 
+                        <span class="nom_pays_span">${countryName}</span>
+                    `;
+        }
+
+
+
+
         const sports = document.getElementById("sports");
+        const athletes = document.getElementById("athletes");
+
+        const discipline_select = document.getElementById("discipline_select");
+
         disciplines.forEach(element => {
-            let sport = document.createElement("div");
-            sport.className = "sport";
-            sport.innerHTML = `
-                                <div class="discipline_div_descri">
-                                    <span class="discipline_name">${element}</span>
-                                    <div class="voir_discipline">
-                                        <span>Voir la discipline</span>
-                                    </div>
-                                </div>
-                            `;
-            sports.appendChild(sport);
+            let sport = document.createElement("option");
+            sport.value = element;
+            sport.textContent = element;
+            discipline_select.appendChild(sport);
+        })
+
+
+
+
+        //----------------------------------------------------
+
+        const epreuve_select = document.getElementById("epreuve_select");
+        const medaille_select = document.getElementById("medaille_select");
+
+        discipline_select.addEventListener("change", function() {
+            sports.innerHTML = "";
+            epreuve_select.innerHTML = '<option value="">Épreuve</option>';
+            /*
+            fetch(`http://localhost:8000/athletes/discipline/${this.value}`)
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(element => {
+                    let sport = document.createElement("div");
+                    sport.innerHTML = `<span>${element["name"]}</span>`;
+                    sports.appendChild(sport);
+                })
+            });
+            */
+            fetch(`http://localhost:8000/epreuve/${this.value}`)
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(element => {
+                    let epreuve = document.createElement("option");
+                    epreuve.value = element["event"];
+                    epreuve.textContent = element["event"];
+                    epreuve_select.appendChild(epreuve);
+                })
+            })
+        })
+
+
+        // ------------------------------------------------------------------------
+        const chercher_athletes = document.getElementById("chercher_athletes");
+        chercher_athletes.addEventListener("click", () => {
+            const params_fetch = new URLSearchParams();
+            params_fetch.append("discipline", discipline_select.value);
+
+            // n'ajoute le paramètre que si sélectionné
+            if (epreuve_select.value !== "") params_fetch.append("epreuve", epreuve_select.value);
+            if (medaille_select.value !== "") params_fetch.append("medaille", medaille_select.value);
+
+            
+            fetch(`http://localhost:8000/athletes/?${params_fetch.toString()}`)
+            .then(response => response.json())
+            .then(data => {
+                athletes.innerHTML = `
+                    <div class="entete_athlete">
+                        <div class="nom_athlete">
+                            <span>Nom</span>
+                        </div>
+
+                        <div class="genre">
+                            <span>Genre</span>
+                        </div>
+
+                        <div class="nom_pays">
+                            <span>Pays</span>
+                        </div>
+
+                        <div class="medal_type">
+                            <span>Médaille</span>
+                        </div>
+
+                        <div class="epreuve">
+                            <span>Épreuve</span> 
+                        </div> 
+                    </div>
+                `;
+
+
+                data.forEach(element => {
+                    let athlete = document.createElement("div");
+                    athlete.className = "athlete";
+                    let name_flag = createFlagWithName(element["country"])
+                    athlete.innerHTML = `
+                        <div class="nom_athlete">
+                            <span>${element["name"]}</span>
+                        </div>
+
+                        <div class="genre">
+                            <span>${element["gender"]}</span>
+                        </div>
+
+                        <div class="nom_pays">
+                            ${name_flag}
+                        </div>
+
+                        <div class="medal_type">
+                            <span>${element["medal_type"]}</span>
+                        </div>
+
+                        <div class="epreuve">
+                            <span>${element["event"]}</span> 
+                        </div> 
+                    
+                    `;
+                    
+                    athletes.appendChild(athlete);
+                    // Songer à corriger les genres pour l'équitation
+                })
+            });
         })
     </script>
 </body>
