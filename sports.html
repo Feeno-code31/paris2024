@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="disciplines.css">
+    <link rel="stylesheet" href="nav_footer_pc_telehone.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7d821e118f.js" crossorigin="anonymous"></script>
     <link
@@ -13,30 +14,40 @@
     />
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Paris 2024</a></li>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="tab_medailles.html">Médailles</a></li>
-            <li><a href="sports.html">Disciplines</a></li>
-            <li><a href="sites.html">Sites</a></li>
-        </ul>
-    </nav>
+    <header> 
+        <div class="header-main">
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <nav>
+                <ul id="navLinks">
+                    <li class="li_logo_telephone">
+                        <figure class="logo_avant_ul_telephone" id="logo_avant_ul_telephone">
+                            <img src="logo.png" alt="">
+                        </figure>
+                    </li>
+                    <li><a href="index.html">Paris 2024</a></li>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="tab_medailles.html">Médailles</a></li>
+                    <li><a href="sports.html">Disciplines</a></li>
+                    <li><a href="sites.html">Sites</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
 
-    <section class="tab_medailles_presentation">
-        <figure class="image_medal">
+    <section class="tab_athletes_presentation">
+        <figure class="image_athlete">
             <img src="athletes_ensemble.jpg" alt="Athlètes des Jeux Olympiques Paris 2024">
         </figure>
         
-        <div class="classement_description">
+        <div class="athletes_description">
             <h1>LISTE DES ATHLÈTES<br>PAR DISCIPLINE</h1>
             <p>
                 Retrouvez tous les athlètes participant aux Jeux Olympiques de Paris 2024. 
                 Filtrez-les par discipline, épreuve et type de médaille pour voir leurs performances et informations détaillées.
             </p>
 
-            <p class="redirection_classement">
+            <p class="redirection_athletes">
                 <a href="#sports">Voir les athlètes</a>
             </p>
         </div>
@@ -338,6 +349,16 @@
                 })
             });
         })
+    </script>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const logo_avant_ul_telephone = document.getElementById("logo_avant_ul_telephone");
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            logo_avant_ul_telephone.classList.toggle('show');
+        });
     </script>
 </body>
 </html>

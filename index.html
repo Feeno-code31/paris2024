@@ -10,15 +10,25 @@
 </head>
 <body>
     <div class="presentation">
-        <nav>
-            <ul>
-                <li><a href="index.html">Paris 2024</a></li>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="tab_medailles.html">Médailles</a></li>
-                <li><a href="sports.html">Disciplines</a></li>
-                <li><a href="sites.html">Sites</a></li>
-            </ul>
-        </nav>
+        <header> 
+            <div class="header-main" id="header-main">
+                <div class="hamburger" id="hamburger">&#9776;</div>
+                <nav>
+                    <ul id="navLinks">
+                        <li class="li_logo_telephone">
+                            <figure class="logo_avant_ul_telephone" id="logo_avant_ul_telephone">
+                                <img src="logo.png" alt="">
+                            </figure>
+                        </li>
+                        <li><a href="index.html">Paris 2024</a></li>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="tab_medailles.html">Médailles</a></li>
+                        <li><a href="sports.html">Disciplines</a></li>
+                        <li><a href="sites.html">Sites</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
         <div class="home_story">
             <div class="paris_2024_intro">
@@ -153,9 +163,17 @@
     </footer>
 
     <script>
-        document.querySelector(".flamme").addEventListener("click", () => {
-            window.location = "tab_medailles.html";
-        })
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const logo_avant_ul_telephone = document.getElementById("logo_avant_ul_telephone");
+
+        const header_main = document.getElementById("header-main");
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            logo_avant_ul_telephone.classList.toggle('show');
+            header_main.classList.toggle('show');
+        });
     </script>
 </body>
 </html>

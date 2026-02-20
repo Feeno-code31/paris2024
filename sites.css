@@ -74,7 +74,7 @@ ul li:hover a {
     max-width: 100%;
 }
 
-.classement_description {
+.sites_description {
     display: flex;
     flex-direction: column;
     max-width: 100%;
@@ -85,61 +85,67 @@ ul li:hover a {
     color: white;
 }
 
-.classement_description h1 {
+.sites_description h1 {
     font-size: 50px;
 }
 
-.classement_description p {
+.sites_description p {
     font-size: 20px;
 }
 
-.classement_description p a {
+.sites_description p a {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
 
-.redirection_classement {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border: 1px solid;
-    border-radius: 5px;
-    background-color: #000000ca;
+@media(max-width : 750px) {
+    .sites_presentation {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        border: none;
+        border-bottom: 5px solid black;
+        padding: 20px;
+        background-image: none;
+    }
+
+    .image_site {
+        background-image: url("sites_ensemble.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 450px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .image_site img {
+        visibility: hidden;
+    }
+
+    .sites_description {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        text-align: left;
+        padding: 15px 5px;
+        color: black;
+    }
+
+    .sites_description h1 {
+        font-size: 50px;
+    }
+
+    .sites_description p {
+        font-size: 22px;
+    }
+
+    .sites_description p a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
 }
 
-.redirection_classement:hover {
-    background-color: rgb(40, 40, 39);
-}
 
 
-
-footer {
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    gap: 40px;              
-    padding: 10px;
-    background-color: #f5f5f5; 
-    background: #ede8da;
-    background: linear-gradient(141deg, rgba(237, 232, 218, 1) 19%, rgba(229, 227, 224, 1) 38%, rgba(221, 221, 230, 1) 62%, rgba(220, 221, 230, 1) 64%, rgba(217, 201, 145, 1) 76%, rgba(255, 255, 255, 1) 91%);
-}
-
-
-footer > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-footer > div span {
-    display: block;
-    text-align: center;
-    font-size: 20px;
-}
-
-.logo_jo_2024 img {
-    display: block;
-    text-align: center;
-    width: 300px;
-}
 

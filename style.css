@@ -64,6 +64,11 @@ body {
 } 
 
 
+/* Pour responsive telephone*/
+.header-main {
+    position: relative;
+}
+
 ul {
     display: flex;
     list-style: none;
@@ -71,6 +76,15 @@ ul {
     max-width: 100%;
 }
 
+/* Pour responsive telephone*/
+.logo_avant_ul_telephone {
+    display: none;
+}
+
+nav ul .li_logo_telephone {
+    display: none;
+}
+/*--------------------*/
 nav ul li {
     width: 100%;
 }
@@ -80,11 +94,10 @@ nav ul li a{
     padding: 20px;
     color: white;
     text-align: center;
+    font-size: 20px;
+
 }
 
-nav ul li a {
-    font-size: 20px;
-}
 
 ul li:hover {
     background: #ffffff url("logo.png") no-repeat center/cover;
@@ -96,7 +109,30 @@ ul li:hover a {
     letter-spacing: 5px;
 }
 
+.hamburger {
+    display: none;            /* visible uniquement en responsive */
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: auto;        /* pousse l'icône hamburger à droite */
+    order: 2;                 /* pour s'assurer qu'il soit à la fin */
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------*/
 .infos {
     display: flex;
     justify-content: center;
@@ -368,62 +404,52 @@ footer > div span {
 
 
 @media (max-width : 750px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        max-width: 100%;
-    }
-
-    body {
-        margin: 0 auto;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        font-family: "Bebas Neue", sans-serif;
-    }
-
     .presentation {
+        background-position: center;
+    }
+
+    .header-main {
         margin: 0;
-        background-image: url("tgsogpu8rgvos7ugwgro.avif");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        max-width: 100%;
+    }
+
+    .hamburger {
+        color: white;
     }
 
     .home_story {
-        display: block;
-        text-align: center;
-        margin-top: 40px;
+        margin-top: 0px;
     }
 
     .flamme {
+        display: block;
         text-align: center;
         width: 200px;
         text-align: center;
+        margin: 0 auto;
     }
 
     .paris_2024 {
         display: flex;
         justify-content: center;
         text-align: center;
-        margin: 10%;
+        flex-direction: column;
+        margin-top: 20px;
     }
 
 
-    .paris_2024 .paris h1{
+    .paris_2024 .date_2024 h1,
+    .paris_2024 .paris h1 {
         display: block;
-        font-size: 130px;
+        font-size: 80px;
+        letter-spacing: 8px;
         margin: 0;
+    }
+
+    .paris_2024 .paris h1 {
         color: blue;
     }
 
-
     .paris_2024 .date_2024 h1{
-        display: block;
-        font-size: 130px;
-        margin: 0;
         color: red;
     }
 
@@ -431,276 +457,164 @@ footer > div span {
     .paris_2024_intro span {
         display: block;
         margin: 0;
-        font-size: 30px;
+        font-size: 20px;
         color: white;
     } 
 
+    /*--------------------------*/
 
-    ul {
-        display: flex;
-        list-style: none;
-        justify-content: space-around;
-        max-width: 100%;
+    .header-main {
+        padding: 10px 0;
     }
 
-    nav ul li {
-        width: 100%;
+    #header-main.show {
+        background-color: black;
     }
 
-    nav ul li a{
+    nav ul .li_logo_telephone {
         display: block;
-        padding: 20px;
-        color: white;
-        text-align: center;
+    }
+
+    #logo_avant_ul_telephone {
+        display: none;
+    }
+
+    #logo_avant_ul_telephone.show {
+        display: block;
+        width: 100%;
+        background-color: white;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    #navLinks {
+        display: flex;
+        flex: 1;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f5f5f5;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        z-index: 999;
+        margin-top: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 1s ease, opacity 0.25s ease;
+    }
+
+    #navLinks li:nth-child(2) {
+        display: none;
+    }
+
+    #navLinks.show {
+        max-height: 500px; /* assez grand pour contenir le menu */
+        opacity: 1;
+        padding: 15px 0;
+        max-height: 100vh;
+    }
+
+    #navLinks li {
+        margin-bottom: 15px;
+    }
+
+    nav ul li:hover {
+        background: none;
     }
 
     nav ul li a {
-        font-size: 20px;
-    }
-
-    ul li:hover {
-        background: #ffffff url("logo.png") no-repeat center/cover;
-    }
-
-    ul li:hover a {
         color: black;
-        font-size: 30px;
-        letter-spacing: 5px;
     }
 
-
+    /*------------------------------------------------*/
+    /*      INFO    */
+    
     .infos {
-        display: flex;
         flex-direction: column;
-        margin-top: 40px;
+        margin: 20px;
     }
 
-    li a {
-        text-decoration: none;
-        color: white;
+    .infos .info {
+        width: 100%;
     }
 
-
-    .disciplines, .sites {
-        display: block;
-        text-align: center;
-        margin-top: 30px;
-        background-color: azure;
+    .infos .info img {
+        width: 100%;
     }
 
-    .sites {
-        background-color: rgb(0, 27, 53);
-        color: white;
-        overflow: hidden;
-    }
-
-    .div_disciplines{
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr 1fr;
-        width: 90%;
-        margin: 0 auto;
-    }
 
     .disciplines {
-        display: block;
-    }
-
-    .description_disciplines_entete {
-        display: block;
-        margin-top: 30px;
-    }
-
-    .description_disciplines_entete span {
-        display: block;
-        border: 1px solid rgba(242, 214, 2, 1);
-        width: 200px;
-        margin: 40px auto 0;
-        border-radius: 20px;
-        padding: 10px;
-        background-color: #454020;
-        color: rgba(242, 214, 2, 1);
-    }
-
-    .description_disciplines_entete h2 {
-        display: block;
-        font-size: 50px;
-        font-weight: bold;
-    }
-
-    .discipline {
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        height: 225px;
-        padding: 20px;
-        border: 1px solid;
-        border-radius: 20px;
-        font-size: 30px;
-        color: white;
-        transition: transform 1s ease;
+        flex-direction: column;
     }
 
-    .voir_tous_disciplines, .voir_tous_sites {
-        display: block;
-        text-decoration: none;
-        padding: 20px;
-        border: 1px solid;
-        border-radius: 20px;
-        color: white;
-        font-size: 22px;
-        box-sizing: border-box;
-        width: fit-content;
-        margin: 30px auto;
-        background-color: rgb(0, 27, 53);
-        transition: transform 0.5s ease;
+    .div_disciplines {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
     }
 
-    .voir_tous_disciplines:hover {
-        background-color: rgb(5, 83, 150);
-        transform: scale(1.05);
-    }
-
-    .voir_tous_sites {
-        background: #ffaa00;
-        background: linear-gradient(304deg, rgba(255, 170, 0, 1) 50%, rgba(242, 192, 12, 1) 61%, rgba(237, 210, 135, 1) 100%);
-    }
-
-    .voir_tous_sites:hover {
-        background: #ffaa00;
-        background: linear-gradient(304deg, rgb(255, 196, 77) 50%, rgb(249, 231, 167) 61%, rgba(237, 210, 135, 1) 100%);
-        color: black;
-        transform: scale(1.05);
-    }   
-
-    .discipline:hover {
-        transform: scale(1.1);
-    }
-
-    #natation {
-        background-image: url(natation.jpg);
-
-    }
-
-    #gymnastique {
-        background-image: url(gymnastique.jpg);
-    }
-
-    #patinage {
-        background-image: url(patinage.jpg);
-    }
-
-    #athletisme {
-        background-image: url(athletisme.jpg);
-    }
-
-    #football {
-        background-image: url(football.jpg);
-    }
-
-    #escrime {
-        background-image: url(escrime.jpg);
-    }
-
-    #natation, #escrime, #football, #athletisme, #gymnastique, #patinage,
-    #stade_de_france, #tour_eiffel, #grand_palais {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
-
-    .description_sites_entete span {
-        display: block;
-        border: 1px solid rgba(242, 214, 2, 1);
-        width: 200px;
-        margin: 40px auto 0;
-        border-radius: 20px;
-        padding: 10px;
-        background-color: #454020;
-        color: rgba(242, 214, 2, 1);
-    }
-
-    .description_sites_entete h2 {
-        display: block;
-        font-size: 50px;
-        font-weight: bold;
+    .div_disciplines .discipline {
+        margin: 0 20px;
+        border-radius: 5px;
+        max-width: 100%;
     }
 
     .div_sites {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
-    .site {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        height: 500px;
-        padding: 20px;
-        border: 1px solid;
-        border-radius: 20px;
-        font-size: 30px;
-        color: white;
-    }
-
-    .text_site {
-        display: flex;
-        flex-direction: column;
-        justify-content: first baseline;
-        align-items: first baseline;
-    }
-
-    .location_site {
-        font-size: 15px;
-        color: yellow;
-        margin: 0;
-    }
-
-    .site_name {
-        font-size: 25px;
-        margin: 2px;
-        font-weight: bold;
-    }
-
-    .text_site span {
-        font-size: 15px;
-    }
-
-    #stade_de_france {
-        background-image: url("stade_de_france.jpg");
-    }
-    #grand_palais {
-        background-image: url("grand_palais.jpg");
-    }
-    #tour_eiffel {
-        background-image: url("tour_eiffel.jpg");
+    .div_sites .site {
+        margin: 0 20px;
+        border: 3px solid;
+        border-radius: 5px;
+        border-color: yellow;
     }
 
 
+
+
+
+
+    /* FOOTER */
 
     footer {
         display: flex;
+        margin-top: 20px;
+        flex-direction: column;
         justify-content: center; 
         align-items: center;     
-        gap: 40px;              
-        padding: 10px;
+        gap: 0;              
         background-color: #f5f5f5; 
         background: #ede8da;
         background: linear-gradient(141deg, rgba(237, 232, 218, 1) 19%, rgba(229, 227, 224, 1) 38%, rgba(221, 221, 230, 1) 62%, rgba(220, 221, 230, 1) 64%, rgba(217, 201, 145, 1) 76%, rgba(255, 255, 255, 1) 91%);
     }
 
 
-    footer > div {
+    footer div {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    footer > div span {
+    footer div span {
         display: block;
         text-align: center;
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .logo_jo_2024 img {
@@ -708,5 +622,4 @@ footer > div span {
         text-align: center;
         width: 300px;
     }
-
 }
