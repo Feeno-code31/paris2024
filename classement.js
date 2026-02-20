@@ -476,12 +476,6 @@ const classementJO = Object.entries(pays)
   });
 
 
-console.log(classementJO);
-
-
-
-console.log(pays);
-
 const countryNameToCode = {
     "United States": "us",
     "China": "cn",
@@ -582,10 +576,10 @@ function createFlagWithName(countryName) {
     const code = countryNameToCode[countryName];
     if (!code) return countryName; 
 
-    return `<span class="country">
-                <span class="fi fi-${code}"></span> 
-                <span class="nom_pays_tab">${countryName}</span>
-            </span>`;
+    return `
+              <span class="fi fi-${code}"></span> 
+              <span class="nom_pays_tab">${countryName}</span>
+            `;
 }
 
 

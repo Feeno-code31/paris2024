@@ -323,3 +323,299 @@ footer > div span {
     border-radius: 10px;
     background-color: white;
 }
+
+
+@media (max-width : 750px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    body {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Bebas Neue", sans-serif;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        max-width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a{
+        display: block;
+        padding: 20px;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    ul li:hover {
+        background: url("logo.png") no-repeat center/cover;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    ul li:hover a {
+        color: black;
+        font-size: 25px;
+        letter-spacing: 5px;
+    }
+
+
+    /*------------------------------------------------------------*/
+
+
+    .tab_medailles_presentation {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        border: none;
+        border-bottom: 5px solid black;
+        padding: 20px;
+    }
+
+    .image_medal {
+        background-image: url("disciplines-medal.avif");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 450px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .image_medal img {
+        visibility: hidden;
+    }
+
+    .classement_description {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        text-align: left;
+        padding: 15px 5px;
+    }
+
+    .classement_description h1 {
+        font-size: 50px;
+    }
+
+    .classement_description p {
+        font-size: 22px;
+    }
+
+    .classement_description p a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+
+    .redirection_classement {
+        margin-top: 10px;
+    }
+
+    .redirection_classement:hover {
+        background-color: rgb(40, 40, 39);
+    }
+
+
+
+    /*------------------------------------*/
+
+    .medailles {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        gap: 5px;
+        margin: 20px 20px;
+    }
+
+    .medaille {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 150px;
+        justify-content: flex-end;
+        align-items: flex-start;
+        border-radius: 20px;
+        color: white;
+        text-align: left;
+    }
+
+    .medaille p {
+        display: block;
+        font-weight: bold;
+        font-size: 30px;
+        margin: 0 0 0 10px;
+    }
+
+    #gold_medal {
+        background-image: url("gold_medal_olympics_paris_2024.jpg");
+    }
+
+    #silver_medal {
+        background-image: url("silver\ medal.jpg");
+    }
+
+    #bronze_medal {
+        background-image: url("2024-Paris-Summer-Olympics-bronze-medal.jpg");
+    }
+
+    #bronze_medal, #gold_medal, #silver_medal {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /*-----------------------------------------------*/
+    .classement {
+        display: block;
+        margin: 0 2.5%;
+    }
+
+    .classement_sous{
+        display: grid;
+        grid-template-columns: 8% 52% 10% 15% 15%;
+        gap: 0;
+    }
+
+
+    .classement_sous div {
+        display: block;
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .header {
+        font-weight: bold;
+        border-bottom: 8px solid #ccc;
+        background-color: rgb(223, 230, 230);
+    }
+    
+    .nom_pays span{
+        margin-left: 5px;
+    }
+
+    .header div {
+        font-size: 20px;
+    }
+    
+
+    footer {
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;     
+        gap: 0;              
+        background-color: #f5f5f5; 
+        background: #ede8da;
+        background: linear-gradient(141deg, rgba(237, 232, 218, 1) 19%, rgba(229, 227, 224, 1) 38%, rgba(221, 221, 230, 1) 62%, rgba(220, 221, 230, 1) 64%, rgba(217, 201, 145, 1) 76%, rgba(255, 255, 255, 1) 91%);
+    }
+
+
+    footer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div span {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .logo_jo_2024 img {
+        display: block;
+        text-align: center;
+        width: 300px;
+    }
+
+
+
+
+
+
+    /* -------------------------------------------*/
+
+    .pays_details {
+        margin: 0 25%;
+        background: #ffaa00;
+        background: linear-gradient(304deg, rgba(255, 170, 0, 1) 50%, rgba(242, 192, 12, 1) 61%, rgba(237, 210, 135, 1) 100%);
+        padding: 20px;
+        border-radius: 0px;
+    }
+
+    .info_pays_details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .pays_stats {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        margin: 0 10px;
+    }
+
+    .or, .argent, .bronze {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid;
+        width: 100%;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .filtre_medailles {
+        display: block;
+        background-color: #ccc;
+        border-bottom: 2px solid black;
+        margin-bottom: 0;
+    }
+
+    .choix_filtre_medailles {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        background-color: #ccc;
+        margin: 10px 10px 20px 10px;
+    }
+
+    .section_medailles_filtre {
+        display: block;
+        margin: 0;
+        background-color: #ccc;
+        border: 1px solid;
+        padding: 20px;
+    }
+
+    .medaille_filtre_css {
+        display: block;
+        padding: 10px;
+        border: 1px solid;
+        border-radius: 10px;
+        background-color: white;
+    }
+}
