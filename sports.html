@@ -265,7 +265,7 @@
                 })
             });
             */
-            fetch(`http://localhost:8000/epreuve/${this.value}`)
+            fetch(`http://127.0.0.1:8000/epreuve/${this.value}`)
             .then(response => response.json())
             .then(data => {
                 data.forEach(element => {
