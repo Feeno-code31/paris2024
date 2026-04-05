@@ -554,18 +554,16 @@ footer > div span {
     }
 
     .text_site p {
-        font-size: 15px;
+        font-size: 20px;
         margin: 0;
         padding: 0;
     }
 
-    
-
-    .location_site, .text_site span {
-        font-size: 10px;
+    .text_site span {
+        font-size: 15px;
         margin: 0;
+        padding: 0;
     }
-    
 
 
 
