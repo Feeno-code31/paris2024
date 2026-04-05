@@ -5,7 +5,6 @@
 .tab_athletes_presentation {
     display: grid;
     grid-template-columns: 65% 35%;
-    border: 1px solid;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -34,11 +33,14 @@
     text-align: center;
     padding: 10px 30px;
     text-align: left;
-    background-color: rgb(245, 245, 233);
+    color: black;
+    background-color: beige;
+    margin: 30px;
 }
 
 .athletes_description h1 {
     font-size: 50px;
+    word-spacing: 2px;
 }
 
 .athletes_description p {
@@ -203,23 +205,20 @@
     .athletes_description {
         padding: 15px 5px;
         color: black;
+        margin: 0
     }
 
     .athletes_description h1 {
         font-size: 40px;
     }
 
-    .athletes_description p {
+    /* .athletes_description p {
         font-size: 22px;
-    }
-
-    .athletes_description p a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-    }
+    } */
 
     .redirection_athletes {
-        display: none;
+        margin-top: 10px;
+        border-radius: 10px;
     }
 
     /*---------------------------------------------*/

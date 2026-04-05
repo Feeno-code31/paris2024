@@ -3,16 +3,19 @@
 .sites_presentation {
     display: grid;
     grid-template-columns: 65% 35%;
-    /* border: 1px solid; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 0px;
+    padding: 40px;
     background-color: #f6f3f3;
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/00/Olympic_rings_on_the_Eiffel_Tower_2024_%2826%29.jpg);
 }
 
-
+/* .image_site {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
 .image_site img {
     display: block;
@@ -30,7 +33,7 @@
     text-align: left;
     color: black;
     background-color: beige;
-    margin: 40px;
+    margin: 30px;
 }
 
 .sites_description h1 {
@@ -39,13 +42,7 @@
 }
 
 .sites_description p {
-    font-size: 25px;
-    word-spacing: 2px;
-}
-
-.sites_description p a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+    font-size: 20px;
 }
 
 /* -------------------------- */
@@ -135,44 +132,29 @@
         border: none;
         border-bottom: 5px solid black;
         padding: 20px;
-        background-image: none;
+        background: none;
+        background-color: aliceblue;
     }
 
-    .image_site {
-        background-image: url("sites_ensemble.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        height: 450px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .image_site img {
-        visibility: hidden;
-    }
 
     .sites_description {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-        text-align: left;
         padding: 15px 5px;
         color: black;
+        margin: 0
     }
 
     .sites_description h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
-    .sites_description p {
+    /* .sites_description p {
         font-size: 22px;
-    }
+    } */
 
-    .sites_description p a {
+    /* .sites_description p a {
         text-decoration: none;
         color: rgb(255, 255, 255);
-    }
+    } */
 }
 
 

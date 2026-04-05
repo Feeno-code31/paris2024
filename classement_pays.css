@@ -5,7 +5,6 @@
 .tab_medailles_presentation {
     display: grid;
     grid-template-columns: 65% 35%;
-    border: 1px solid;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -34,11 +33,14 @@
     text-align: center;
     padding: 10px 30px;
     text-align: left;
-    background-color: rgb(245, 245, 233);
+    color: black;
+    background-color: beige;
+    margin: 30px;
 }
 
 .classement_description h1 {
     font-size: 50px;
+    word-spacing: 2px;
 }
 
 .classement_description p {
@@ -272,6 +274,7 @@
     .classement_description {
         padding: 15px 5px;
         color: black;
+        margin: 0
     }
 
     .classement_description h1 {
@@ -282,14 +285,11 @@
         font-size: 22px;
     }  */
 
-    
 
     .redirection_classement {
         margin-top: 10px;
         border-radius: 10px;
     }
-
-
 
     /*------------------------------------*/
 
