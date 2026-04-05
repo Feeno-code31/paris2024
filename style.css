@@ -10,12 +10,12 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Geist", sans-serif;
 }
 
 .presentation {
     margin: 0;
-    background-image: url("tgsogpu8rgvos7ugwgro.avif");
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/9e/Olympic_rings_on_the_Eiffel_Tower_2024_%285%29.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -27,23 +27,17 @@ body {
     margin-top: 40px;
 }
 
-.flamme {
-    text-align: center;
-    width: 200px;
-    text-align: center;
-}
-
 .paris_2024 {
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: flex-start;
 }
 
 
 .paris_2024 .paris h1{
     display: block;
     font-size: 130px;
-    margin: 0;
+    margin: 20px;
     color: blue;
 }
 
@@ -51,7 +45,7 @@ body {
 .paris_2024 .date_2024 h1{
     display: block;
     font-size: 130px;
-    margin: 0;
+    margin: 20px;
     color: red;
 }
 
@@ -61,6 +55,7 @@ body {
     margin: 0;
     font-size: 30px;
     color: white;
+    text-align: bottom;
 } 
 
 
@@ -68,6 +63,7 @@ body {
 .header-main {
     position: relative;
 }
+
 
 ul {
     display: flex;
@@ -80,53 +76,41 @@ ul {
 .logo_avant_ul_telephone {
     display: none;
 }
-
-nav ul .li_logo_telephone {
-    display: none;
-}
 /*--------------------*/
 nav ul li {
     width: 100%;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
 }
 
 nav ul li a{
     display: block;
     padding: 20px;
-    color: white;
+    color: black;
     text-align: center;
     font-size: 20px;
-
+    text-decoration: none;
 }
 
 
 ul li:hover {
-    background: #ffffff url("logo.png") no-repeat center/cover;
+    background-color: beige;
 }
 
 ul li:hover a {
     color: black;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 5px;
+    font-weight: bold;
 }
 
 .hamburger {
-    display: none;            /* visible uniquement en responsive */
+    display: none;            
     font-size: 30px;
     cursor: pointer;
-    margin-left: auto;        /* pousse l'icône hamburger à droite */
-    order: 2;                 /* pour s'assurer qu'il soit à la fin */
+    margin-left: auto;        
+    order: 2;                 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -144,8 +128,9 @@ ul li:hover a {
 .info {
     padding: 20px;
     border-radius: 10px;
-    background: #ede8da;
     background: linear-gradient(141deg, rgba(237, 232, 218, 1) 19%, rgba(229, 227, 224, 1) 38%, rgba(221, 221, 230, 1) 62%, rgba(220, 221, 230, 1) 64%, rgba(217, 201, 145, 1) 76%, rgba(255, 255, 255, 1) 91%);
+    width: 320px;
+    height: 350px;
 }
 
 .info h3 {
@@ -158,22 +143,6 @@ ul li:hover a {
     display: block;
     font-size: 15px;
 }
-
-.image_info {
-    display: block;
-    width: 250px;
-    height: 200px;
-    border-radius: 15px;
-    object-fit: cover;
-    object-position: center;
-}
-
-li a {
-    text-decoration: none;
-    color: white;
-}
-
-
 
 .disciplines, .sites {
     display: block;
@@ -188,11 +157,11 @@ li a {
     overflow: hidden;
 }
 
-.div_disciplines, .div_sites{
+.div_disciplines{
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -206,35 +175,45 @@ li a {
     margin-top: 30px;
 }
 
-.description_disciplines_entete span {
+.description_disciplines_entete span,
+.description_sites_entete span  {
     display: block;
-    border: 1px solid rgba(242, 214, 2, 1);
-    width: 200px;
+    border: 3px solid rgba(242, 214, 2, 1);
+    font-weight: bold;
+    font-size: 20px;
+    width: 300px;
     margin: 40px auto 0;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
     background-color: #454020;
     color: rgba(242, 214, 2, 1);
 }
 
-.description_disciplines_entete h2 {
+
+
+.description_disciplines_entete h2, 
+.description_sites_entete h2  {
     display: block;
     font-size: 50px;
     font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0;
 }
 
 .discipline {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    height: 225px;
+    height: 270px;
     padding: 20px;
-    border: 1px solid;
     border-radius: 20px;
     font-size: 30px;
-    color: white;
     transition: transform 1s ease;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
+
 
 .voir_tous_disciplines, .voir_tous_sites {
     display: block;
@@ -249,6 +228,7 @@ li a {
     margin: 30px auto;
     background-color: rgb(0, 27, 53);
     transition: transform 0.5s ease;
+    
 }
 
 .voir_tous_disciplines:hover {
@@ -257,14 +237,12 @@ li a {
 }
 
 .voir_tous_sites {
-    background: #ffaa00;
-    background: linear-gradient(304deg, rgba(255, 170, 0, 1) 50%, rgba(242, 192, 12, 1) 61%, rgba(237, 210, 135, 1) 100%);
+    background: #fcc14c;
+    color: black;
 }
 
 .voir_tous_sites:hover {
-    background: #ffaa00;
-    background: linear-gradient(304deg, rgb(255, 196, 77) 50%, rgb(249, 231, 167) 61%, rgba(237, 210, 135, 1) 100%);
-    color: black;
+    background: #f9af1c;
     transform: scale(1.05);
 }   
 
@@ -272,116 +250,119 @@ li a {
     transform: scale(1.1);
 }
 
-#natation {
-    background-image: url(natation.jpg);
 
-}
-
-#gymnastique {
-    background-image: url(gymnastique.jpg);
-}
-
-#patinage {
-    background-image: url(patinage.jpg);
-
-}
-
-#athletisme {
-    background-image: url(athletisme.jpg);
-}
-
-#football {
-    background-image: url(football.jpg);
-}
-
-#escrime {
-    background-image: url(escrime.jpg);
-}
-
-#natation, #escrime, #football, #athletisme, #gymnastique, #patinage,
-#stade_de_france, #tour_eiffel, #grand_palais {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-
-.description_sites_entete span {
+.discipline a {
     display: block;
-    border: 1px solid rgba(242, 214, 2, 1);
-    width: 200px;
-    margin: 40px auto 0;
+    width: 100%;
+    height: 100%;
+}
+
+.discipline a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px;
-    padding: 10px;
-    background-color: #454020;
-    color: rgba(242, 214, 2, 1);
 }
 
-.description_sites_entete h2 {
-    display: block;
-    font-size: 50px;
-    font-weight: bold;
+
+.discipline a span{
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    color: black;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-left: 2px solid black;
+    padding: 5px 10px;
+
 }
+
+
+.sites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_sites {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 80%;
+}
+
 
 .site {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    height: 450px;
+    width: 100%;
     padding: 20px;
     border: 1px solid;
-    border-radius: 20px;
     font-size: 30px;
     color: white;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+.site a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.site a img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 
 .text_site {
-    display: flex;
-    flex-direction: column;
-    justify-content: first baseline;
-    align-items: first baseline;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: black;
+    background-color: white;
+    padding: 0px 25px;
 }
 
-.location_site {
-    font-size: 15px;
-    color: yellow;
+
+.text_site p {
+    text-transform: uppercase;
     margin: 0;
-}
-
-.site_name {
-    font-size: 25px;
-    margin: 2px;
     font-weight: bold;
 }
 
 .text_site span {
+    font-size: 20px;
+    margin: 0;
+    opacity: 0.6;
+}
+
+.location_site {
     font-size: 15px;
-}
-
-#stade_de_france {
-    background-image: url("stade_de_france.jpg");
-}
-#grand_palais {
-    background-image: url("grand_palais.jpg");
-}
-#tour_eiffel {
-    background-image: url("tour_eiffel.jpg");
+    color: black;
+    margin: 0;
 }
 
 
-
+/* -------------------------------------------------- */
 
 footer {
     display: flex;
     justify-content: center; 
     align-items: center;     
-    gap: 40px;              
-    padding: 10px;
-    background-color: #f5f5f5; 
-    background: #ede8da;
-    background: linear-gradient(141deg, rgba(237, 232, 218, 1) 19%, rgba(229, 227, 224, 1) 38%, rgba(221, 221, 230, 1) 62%, rgba(220, 221, 230, 1) 64%, rgba(217, 201, 145, 1) 76%, rgba(255, 255, 255, 1) 91%);
+    gap: 100px;              
+    padding: 20px;
+    background-color: beige;
 }
 
+.paris_2024_name_footer {
+    font-weight: bold;
+    font-size: 50px;
+}
 
 footer > div {
     display: flex;
@@ -395,13 +376,8 @@ footer > div span {
     font-size: 20px;
 }
 
-.logo_jo_2024 img {
-    display: block;
-    text-align: center;
-    width: 300px;
-}
 
-
+/* ------------------------------------------ */
 
 @media (max-width : 750px) {
     .presentation {
@@ -410,23 +386,77 @@ footer > div span {
 
     .header-main {
         margin: 0;
+        padding: 10px 0;
+    }
+    
+    nav {
+        display: flex;
     }
 
     .hamburger {
+        display: block;
+        text-align: right;
+        margin-right: 20px;
         color: white;
     }
+    
 
     .home_story {
         margin-top: 0px;
     }
 
-    .flamme {
-        display: block;
-        text-align: center;
-        width: 200px;
-        text-align: center;
-        margin: 0 auto;
+    nav ul li {
+        width: 100%;
+        background: none;
     }
+
+    #header-main.show {
+        background-color: white;
+    }
+
+    #header-main.show .hamburger {
+        color: black;
+    }
+    
+    #navLinks {
+        display: flex;
+        flex: 1;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        z-index: 999;
+        margin-top: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 1s ease, opacity 0.25s ease;
+    }
+
+    #navLinks li:nth-child(1) {
+        display: none;
+    }
+
+    #navLinks.show {
+        max-height: 500px;
+        opacity: 1;
+        padding: 20px 0;
+        max-height: 100vh;
+    }
+
+    #navLinks li {
+        margin-bottom: 20px;
+    }
+
+    nav ul li:hover {
+        background: none;
+    }
+
+    /* --------------------------- */
 
     .paris_2024 {
         display: flex;
@@ -455,87 +485,13 @@ footer > div span {
 
 
     .paris_2024_intro span {
-        display: block;
-        margin: 0;
-        font-size: 20px;
-        color: white;
+        font-size: 20px; 
     } 
 
     /*--------------------------*/
 
-    .header-main {
-        padding: 10px 0;
-    }
 
-    #header-main.show {
-        background-color: black;
-    }
-
-    nav ul .li_logo_telephone {
-        display: block;
-    }
-
-    #logo_avant_ul_telephone {
-        display: none;
-    }
-
-    #logo_avant_ul_telephone.show {
-        display: block;
-        width: 100%;
-        background-color: white;
-    }
-
-    nav {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-        text-align: right;
-        margin-right: 20px;
-    }
-
-    #navLinks {
-        display: flex;
-        flex: 1;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #f5f5f5;
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 0;
-        z-index: 999;
-        margin-top: 0;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        transition: max-height 1s ease, opacity 0.25s ease;
-    }
-
-    #navLinks li:nth-child(2) {
-        display: none;
-    }
-
-    #navLinks.show {
-        max-height: 500px; /* assez grand pour contenir le menu */
-        opacity: 1;
-        padding: 15px 0;
-        max-height: 100vh;
-    }
-
-    #navLinks li {
-        margin-bottom: 15px;
-    }
-
-    nav ul li:hover {
-        background: none;
-    }
-
-    nav ul li a {
-        color: black;
-    }
+    
 
     /*------------------------------------------------*/
     /*      INFO    */
@@ -549,10 +505,11 @@ footer > div span {
         width: 100%;
     }
 
-    .infos .info img {
-        width: 100%;
+    .info {
+        height: fit-content;
     }
 
+    /* ------------------------------------- */
 
     .disciplines {
         display: flex;
@@ -575,7 +532,10 @@ footer > div span {
     .div_sites {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
     }
 
     .div_sites .site {
@@ -585,9 +545,31 @@ footer > div span {
         border-color: yellow;
     }
 
+    .site, .site a, .site a img {
+        max-width: 100%;
+    }
+
+    .text_site {
+        padding: 0 10px;
+    }
+
+    .text_site p {
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+    }
+
+    
+
+    .location_site, .text_site span {
+        font-size: 10px;
+        margin: 0;
+    }
+    
 
 
 
+    /* ----------------------------------------------- */
 
 
     /* FOOTER */
@@ -599,9 +581,7 @@ footer > div span {
         justify-content: center; 
         align-items: center;     
         gap: 0;              
-        background-color: #f5f5f5; 
-        background: #ede8da;
-        background: linear-gradient(141deg, rgba(237, 232, 218, 1) 19%, rgba(229, 227, 224, 1) 38%, rgba(221, 221, 230, 1) 62%, rgba(220, 221, 230, 1) 64%, rgba(217, 201, 145, 1) 76%, rgba(255, 255, 255, 1) 91%);
+        background-color: beige;  
     }
 
 
@@ -614,12 +594,30 @@ footer > div span {
     footer div span {
         display: block;
         text-align: center;
-        font-size: 30px;
+        font-size: 20px;
     }
 
-    .logo_jo_2024 img {
-        display: block;
-        text-align: center;
-        width: 300px;
+
+    .paris_2024_name_footer {
+        margin: 0;
     }
+
+    .jo2024_name_footer {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .div_date_footer {
+        width: 100%;
+        display: block;
+        margin-top: 30px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 15px;
+    }
+
+    .div_date_footer hr {
+        margin: 10px;
+    }
+    
 }

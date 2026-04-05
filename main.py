@@ -2,6 +2,7 @@ from fastapi import FastAPI, Query
 from pydantic import BaseModel
 from get_athletes_pays_medal import get_athletes_pays_medal
 from get_athletes_disciplines import get_athletes_discipline
+from get_sites import get_sites, get_sites_names
 from fastapi.responses import FileResponse
 from get_epreuves_discipline import get_epreuves_discipline
 from get_athletes_discipline_epreuve import get_athletes_discipline_epreuve
@@ -30,11 +31,6 @@ class Athlete(BaseModel) :
     event : str
 
 
-@app.get("/")
-def home():
-    return FileResponse("sports.html")
-
-
 @app.get("/athletes/pays/{pays}/{medaille}")
 async def read_home(pays:str, medaille:str) :
     data_pays = get_athletes_pays_medal(pays, medaille)
@@ -55,26 +51,26 @@ async def read_epreuves_athletes(discipline : str) :
     return [Event(**epreuve) for epreuve in epreuves]
 
 
-"""
-@app.get("/athletes")
-async def read_athletes(
-    discipline : str, # Obligatoire car on doit avoir une discipline pour sélectionner une épreuve
-    epreuve : str = Query(None), # None par défaut
-    medaille : str = Query(None) # None par défaut
-):
-    if(epreuve != None and medaille != None) :
-        athletes = get_athletes_discipline_epreuve_medaille(discipline, epreuve, medaille)
-        return [Athlete(**athlete) for athlete in athletes]
-    if(epreuve != None) :
-        athletes = get_athletes_discipline_epreuve(discipline, epreuve)
-        return [Athlete(**athlete) for athlete in athletes]
-    if(medaille != None) :
-        athletes = get_athletes_discipline_medaille(discipline,medaille)
-        return [Athlete(**athlete) for athlete in athletes]
+
+# @app.get("/athletes")
+# async def read_athletes(
+#     discipline : str, # Obligatoire car on doit avoir une discipline pour sélectionner une épreuve
+#     epreuve : str = Query(None), # None par défaut
+#     medaille : str = Query(None) # None par défaut
+# ):
+#     if(epreuve != None and medaille != None) :
+#         athletes = get_athletes_discipline_epreuve_medaille(discipline, epreuve, medaille)
+#         return [Athlete(**athlete) for athlete in athletes]
+#     if(epreuve != None) :
+#         athletes = get_athletes_discipline_epreuve(discipline, epreuve)
+#         return [Athlete(**athlete) for athlete in athletes]
+#     if(medaille != None) :
+#         athletes = get_athletes_discipline_medaille(discipline,medaille)
+#         return [Athlete(**athlete) for athlete in athletes]
     
-    athletes = get_athletes_discipline(discipline)
-    return [Athlete(**athlete) for athlete in athletes]
-"""
+#     athletes = get_athletes_discipline(discipline)
+#     return [Athlete(**athlete) for athlete in athletes]
+
 
 @app.get("/athletes")
 async def read_athletes(
@@ -92,3 +88,16 @@ async def read_athletes(
         athletes = [a for a in athletes if a["medal_type"] == medaille]
 
     return [Athlete(**a) for a in athletes]
+
+
+
+
+class Site(BaseModel) :
+    nom_site : str
+    sports : str
+
+@app.get("/sites")
+async def read_sites() : 
+    sites_infos= get_sites()
+    return [Site(**site) for site in sites_infos]
+

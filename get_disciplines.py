@@ -1,6 +1,5 @@
 import requests
 import json
-from pydantic import BaseModel
 
 
 url = "https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/paris-2024-results-medals-oly-eng/records"
@@ -39,9 +38,12 @@ def get_disciplines() :
             exit()
     if not data:
         print('pas de données trouvées')
-    print(data)
     return data
 
-get_disciplines()
+data = get_disciplines()
+for i in data : 
+    print(i["discipline"])
+
+print(len(data))
 
 

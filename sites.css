@@ -1,73 +1,18 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-body {
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: "Bebas Neue", sans-serif;
-}
-
-ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    max-width: 100%;
-}
-
-nav ul li {
-    width: 100%;
-}
-
-nav ul li a{
-    display: block;
-    padding: 20px;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-}
-
-nav ul li a {
-    font-size: 20px;
-}
-
-ul li:hover {
-    background: url("logo.png") no-repeat center/cover;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
-ul li:hover a {
-    color: black;
-    font-size: 25px;
-    letter-spacing: 5px;
-}
 
 /*-----------------------------------------------------*/
-
-
 .sites_presentation {
     display: grid;
     grid-template-columns: 65% 35%;
-    border: 1px solid;
+    /* border: 1px solid; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 40px;
+    padding: 0px;
     background-color: #f6f3f3;
-    background-image: url(tgsogpu8rgvos7ugwgro.avif);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/00/Olympic_rings_on_the_Eiffel_Tower_2024_%2826%29.jpg);
 }
 
-.image_site {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .image_site img {
     display: block;
@@ -79,24 +24,108 @@ ul li:hover a {
     flex-direction: column;
     max-width: 100%;
     align-items: flex-start;
+    justify-content: center;
     text-align: center;
     padding: 10px 30px;
     text-align: left;
-    color: white;
+    color: black;
+    background-color: beige;
+    margin: 40px;
 }
 
 .sites_description h1 {
     font-size: 50px;
+    word-spacing: 2px;
 }
 
 .sites_description p {
-    font-size: 20px;
+    font-size: 25px;
+    word-spacing: 2px;
 }
 
 .sites_description p a {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
+
+/* -------------------------- */
+
+.sites_display {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 10px;
+}
+
+.sites_iconiques {
+    width: 100%;
+}
+
+.sites_iconiques div {
+    padding: 10px;
+    margin: 15px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+
+.sites_iconiques div a img {
+    object-fit: cover;
+    height: auto;
+}
+
+.sites_iconiques div span {
+    font-size: 30px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.tous_les_sites_entete, .sites_iconiques_entete {
+    display: block;
+    width: 100%;
+    font-size: 40px;
+    background-color: azure;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+
+.sites_div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.sites_div:hover {
+    background-color: #D9D9D9;
+}
+
+.sites_div .nom_site_span {
+    font-size: 25px;
+    padding: 10px;
+    background-color: rgb(244, 244, 227);
+    word-spacing: 2px;
+    font-weight: bold;
+}
+
+.sites_div .site_sports_span {
+    font-size: 20px;
+    padding: 0 10px;
+    word-spacing: 2px;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
 
 @media(max-width : 750px) {
     .sites_presentation {
