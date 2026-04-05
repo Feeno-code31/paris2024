@@ -34,7 +34,7 @@
     text-align: center;
     padding: 10px 30px;
     text-align: left;
-    color: white;
+    background-color: rgb(245, 245, 233);
 }
 
 .classement_description h1 {
@@ -47,7 +47,7 @@
 
 .classement_description p a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .redirection_classement {
@@ -56,11 +56,11 @@
     padding: 15px;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: beige;
+    background-color: black;
 }
 
 .redirection_classement:hover {
-    background-color: beige;
+    background-color: rgb(40, 40, 39);
 }
 
 
@@ -274,18 +274,17 @@
         color: black;
     }
 
-    /* .classement_description h1 {
-        font-size: 50px;
+    .classement_description h1 {
+        font-size: 40px;
     }
 
-    .classement_description p {
+    /* .classement_description p {
         font-size: 22px;
-    } */
+    }  */
 
     
 
     .redirection_classement {
-        
         margin-top: 10px;
         border-radius: 10px;
     }
@@ -293,52 +292,6 @@
 
 
     /*------------------------------------*/
-
-    .medailles {
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        gap: 5px;
-        margin: 20px 20px;
-    }
-
-    .medaille {
-        display: flex;
-        flex-direction: column;
-        width: 200px;
-        height: 150px;
-        justify-content: flex-end;
-        align-items: flex-start;
-        border-radius: 20px;
-        color: white;
-        text-align: left;
-    }
-
-    .medaille p {
-        display: block;
-        font-weight: bold;
-        font-size: 30px;
-        margin: 0 0 0 10px;
-    }
-
-    #gold_medal {
-        background-image: url("gold_medal_olympics_paris_2024.jpg");
-    }
-
-    #silver_medal {
-        background-image: url("silver\ medal.jpg");
-    }
-
-    #bronze_medal {
-        background-image: url("2024-Paris-Summer-Olympics-bronze-medal.jpg");
-    }
-
-    #bronze_medal, #gold_medal, #silver_medal {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
 
     /*-----------------------------------------------*/
     .classement {
