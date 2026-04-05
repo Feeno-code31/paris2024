@@ -187,6 +187,7 @@ footer > div span {
         align-items: center;     
         gap: 0;              
         background-color: beige;  
+        border-top: 2px solid black;
     }
 
 
