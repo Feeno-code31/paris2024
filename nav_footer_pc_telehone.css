@@ -105,7 +105,7 @@ footer > div span {
 
 /* ---------------------------------------------------- */
 
-@media (max-width : 750px) {
+@media (max-width : 768px) {
     * {
         margin: 0;
         padding: 0;

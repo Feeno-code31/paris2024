@@ -40,10 +40,4 @@ def get_disciplines() :
         print('pas de données trouvées')
     return data
 
-data = get_disciplines()
-for i in data : 
-    print(i["discipline"])
-
-print(len(data))
-
 

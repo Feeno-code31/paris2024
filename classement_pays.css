@@ -123,7 +123,7 @@
 }
 
 
-.classement_sous{
+.classement_sous, .classement_sous_header{
     display: grid;
     grid-template-columns: 15% 40% 15% 15% 15%;
     align-items: center;
@@ -131,12 +131,14 @@
     font-size: 25px;
 }
 
+
+
 .classement_sous:hover {
     background-color: rgb(226, 240, 252);
 }
 
 
-.header {
+.classement_sous_header{
     font-weight: bold;
     border-bottom: 2px solid #ccc;
     background-color: rgb(223, 230, 230);
@@ -193,7 +195,7 @@
 
 /* -------------------------------------------*/
 
-.pays_details {
+/* .pays_details {
     margin: 0 25%;
     background: #ffaa00;
     background: linear-gradient(304deg, rgba(255, 170, 0, 1) 50%, rgba(242, 192, 12, 1) 61%, rgba(237, 210, 135, 1) 100%);
@@ -254,10 +256,10 @@
     border: 1px solid;
     border-radius: 10px;
     background-color: white;
-}
+} */
 
 
-@media (max-width : 750px) {
+@media (max-width : 768px) {
     /*------------------------------------------------------------*/
 
     .tab_medailles_presentation {
@@ -299,38 +301,38 @@
         margin: 0 2.5%;
     }
 
-    .classement_sous{
+    .classement_sous, .classement_sous_header{
         display: grid;
-        grid-template-columns: 8% 52% 10% 15% 15%;
+        grid-template-columns: 10% 60% 10% 10% 10%;
         gap: 0;
     }
 
 
-    .classement_sous div {
+    .classement_sous div, .classement_sous_header div {
         display: block;
         margin: 0;
         padding: 10px 0;
         width: 100%;
-        font-size: 22px;
-    }
-
-    .header {
-        font-weight: bold;
-        border-bottom: 8px solid #ccc;
-        background-color: rgb(223, 230, 230);
-    }
-    
-    .nom_pays span{
-        margin-left: 5px;
-    }
-
-    .header div {
         font-size: 20px;
     }
 
+    
+    .classement_sous .nom_pays span{
+        margin-left: 5px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .classement_sous div {
+        font-size: 18px;
+    }
+
+
+
+
     /* -------------------------------------------*/
 
-    .pays_details {
+    /* .pays_details {
         margin: 0 25%;
         background: #ffaa00;
         background: linear-gradient(304deg, rgba(255, 170, 0, 1) 50%, rgba(242, 192, 12, 1) 61%, rgba(237, 210, 135, 1) 100%);
@@ -343,9 +345,9 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-start;
-    }
+    } */
 
-    .pays_stats {
+    /* .pays_stats {
         display: flex;
         justify-content: space-around;
         gap: 10px;
@@ -360,9 +362,9 @@
         width: 100%;
         border-radius: 10px;
         background-color: white;
-    }
+    } */
 
-    .filtre_medailles {
+    /* .filtre_medailles {
         display: block;
         background-color: #ccc;
         border-bottom: 2px solid black;
@@ -391,5 +393,5 @@
         border: 1px solid;
         border-radius: 10px;
         background-color: white;
-    }
+    } */
 }

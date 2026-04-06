@@ -1,8 +1,10 @@
 from fastapi import FastAPI, Query
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from get_athletes_pays_medal import get_athletes_pays_medal
 from get_athletes_disciplines import get_athletes_discipline
 from get_sites import get_sites, get_sites_names
+from get_pays import get_pays
+from get_disciplines import get_disciplines
 from fastapi.responses import FileResponse
 from get_epreuves_discipline import get_epreuves_discipline
 from get_athletes_discipline_epreuve import get_athletes_discipline_epreuve
@@ -101,3 +103,41 @@ async def read_sites() :
     sites_infos= get_sites()
     return [Site(**site) for site in sites_infos]
 
+
+
+class PaysClassement(BaseModel):
+    pays: str
+    gold: int
+    silver: int
+    bronze: int
+
+
+@app.get("/classement", response_model=list[PaysClassement])
+async def read_pays_classement():
+    pays_medals = get_pays()
+
+    classement = [
+        PaysClassement(
+            pays=nom,
+            gold=medals["Gold Medal"],
+            silver=medals["Silver Medal"],
+            bronze=medals["Bronze Medal"],
+        )
+        for nom, medals in pays_medals.items()
+    ]
+
+    classement.sort(
+        key=lambda x: (-x.gold, -x.silver, -x.bronze)
+    )
+
+    return classement
+
+
+class Discipline(BaseModel) : 
+    discipline : str 
+
+@app.get("/disciplines") 
+
+async def read_disciplines() : 
+    disciplines = get_disciplines()
+    return [Discipline(**discipline) for discipline in disciplines]

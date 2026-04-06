@@ -1,6 +1,5 @@
 import requests
 import json
-from pydantic import BaseModel
 
 
 url = "https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/paris-2024-results-medals-oly-eng/records"

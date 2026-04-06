@@ -39,7 +39,6 @@ def get_pays() :
             medal_type = elem["medal_type"]
             dict_pays_medal[country][medal_type] += 1
 
-    print(dict_pays_medal)
     return dict_pays_medal
 
 all_data_pays = get_pays()

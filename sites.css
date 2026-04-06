@@ -124,7 +124,7 @@
 
 
 
-@media(max-width : 750px) {
+@media(max-width : 768px){
     .sites_presentation {
         display: flex;
         flex-direction: column;

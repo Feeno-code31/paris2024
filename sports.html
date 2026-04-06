@@ -113,7 +113,6 @@
     </footer>
 
 
-    <script src="disciplines.js"></script>
     <script>
         const countryNameToCode = {
             "United States": "us",
@@ -229,12 +228,24 @@
 
         const discipline_select = document.getElementById("discipline_select");
 
-        disciplines.forEach(element => {
-            let sport = document.createElement("option");
-            sport.value = element;
-            sport.textContent = element;
-            discipline_select.appendChild(sport);
-        })
+
+        fetch(`http://127.0.0.1:8000/disciplines`)
+        .then(response => response.json())
+        .then(disciplines => 
+            disciplines.forEach(discipline => {
+                let sport = document.createElement("option");
+                sport.value = discipline["discipline"];
+                sport.textContent = discipline["discipline"];
+                discipline_select.appendChild(sport);
+            })
+        )
+        
+        // disciplines.forEach(element => {
+        //     let sport = document.createElement("option");
+        //     sport.value = element;
+        //     sport.textContent = element;
+        //     discipline_select.appendChild(sport);
+        // })
 
 
 
