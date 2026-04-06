@@ -74,7 +74,7 @@
     justify-content: center;
     gap: 20px;
     margin: 0 10%;
-    margin-top: 10px;
+    margin-top: 30px;
     border-bottom: 10px solid rgb(0, 0, 0);
     padding-bottom: 10px;
 }
@@ -85,9 +85,9 @@
     border: 1px solid black;
     border-radius: 5px;
     width: 100%;
-    background-color: rgb(255, 255, 255);
-    font-size: 24px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+    font-size: 20px;
+    font-family: "Geist" sans-serif;
     font-style: italic;
 }
 
@@ -96,6 +96,8 @@
     display: block;
     width: 100%;
 }
+
+
 .option_select div button {
     display: block;
     padding: 20px;
@@ -106,8 +108,8 @@
     cursor: pointer;
     font-size: 25px;
     color: white;
-    transition: background 0.5s ease;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background 0.1s ease;
+    font-family: "Geist" sans-serif;
     font-style: italic;
 }
 
@@ -126,7 +128,6 @@
 }
 
 .entete_athlete {
-    background-color: rgb(218, 233, 247);
 }
 
 .athlete, .entete_athlete {
@@ -134,60 +135,80 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    border-bottom: 2px solid black;
 }
+
+.athlete, .entete_athlete{
+    display: grid;
+    grid-template-columns: 30% 10% 15% 15% 15% 15%;
+    width: 100%;
+    padding: 15px;
+    font-size: 25px;
+}
+
+.entete_athlete {
+    font-weight: bold;
+    font-size: 15px;
+    opacity: 0.7;
+    padding: 30px;
+}
+
 
 .athlete div, .entete_athlete div {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.athlete div span, .entete_athlete div span {
     width: 100%;
-    font-size: 25px;
-    padding: 20px;
-    border-bottom: 4px solid grey;
-    font-size: 25px;
-
-}
-
-.entete_athlete .genre, .athlete .genre{
     text-align: center;
-    width: 30%;
 }
 
-.entete_athlete .nom_pays, .athlete .nom_pays, 
-.entete_athlete .medal_type, .athlete .medal_type{
-    text-align: center;
-    width: 75%;
+.athlete .nom_athlete span,
+.entete_athlete .nom_athlete span {
+    text-align: left;
 }
 
-.entete_athlete .epreuve, .athlete .epreuve{
+
+
+.athlete .epreuve span,
+.entete_athlete .epreuve span{
     text-align: right;
 }
 
-.athlete .nom_pays .nom_pays_span{
-    margin-left: 10px;
-} 
-
-.athlete{
-    transition: background 0.5s ease;
-}
 
 .athlete:hover {
     background-color: beige;
 }
 
-
+.athlete div {
+    font-size: 20px;
+}
 
 .athlete .nom_athlete {
-    background-color: #f6f3f3;
-    transition: border 0.5s ease;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.athlete .nom_pays {
+    display: flex;
+    gap: 0;
+}
+
+.athlete .nom_pays span {
+    margin: 0;
+}
+
+.athlete .nom_pays .nom_pays_span {
+    display: block;
+    margin-left: 0;
 }
 
 
-.athlete:hover .nom_athlete {
-    border-bottom: 4px solid rgb(70, 82, 255);
-    border-left: 4px solid red;
-}
 
-
-
+/* ----------------------------------- */
 
 @media(max-width : 768px) {
     .tab_athletes_presentation {
@@ -263,3 +284,12 @@
 
 
 }
+
+
+
+
+
+
+
+
+
