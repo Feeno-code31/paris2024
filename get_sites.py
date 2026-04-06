@@ -50,15 +50,6 @@ def get_sites_names() :
     return [{"nom_site" : site["nom_site"]} for site in data]
 
 
-data = get_sites()
-data = list({item["nom_site"]: item for item in data}.values())
-print(len(data))
-# for i in data : 
-#     if i["category_id"] == "venue-paralympic" : 
-#         print(i)
-
-print(data)
-
 
 
 

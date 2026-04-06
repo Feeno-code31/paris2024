@@ -577,7 +577,7 @@ function createFlagWithName(countryName) {
     if (!code) return countryName; 
 
     return `
-              <span class="fi fi-${code}"></span> 
+              <span class="fi fi-${code} flag_icone"></span> 
               <span class="nom_pays_tab">${countryName}</span>
             `;
 }

@@ -153,6 +153,11 @@
     margin-left: 1em;
 }
 
+.flag_icone {
+    display: block;
+    padding: 10px;
+}
+
 .nb_gold_medals,
 .nb_silver_medals,
 .nb_bronze_medals,
@@ -184,9 +189,6 @@
     color: #CD7F32;
 }
 
-.classement {
-    border-radius: 30px;
-}
 
 
 

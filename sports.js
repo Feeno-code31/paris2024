@@ -99,7 +99,7 @@ function createFlagWithName(countryName) {
     if (!code) return countryName; 
 
     return  `
-                <span class="fi fi-${code}"></span> 
+                <span class="fi fi-${code} flag_icone"></span> 
                 <span class="nom_pays_span">${countryName}</span>
             `;
 }
@@ -164,16 +164,17 @@ chercher_athletes.addEventListener("click", () => {
     .then(data => {
         athletes.innerHTML = `
             <div class="entete_athlete">
+                
+                <div class="nom_pays">
+                    <span>Pays</span>
+                </div>
+                
                 <div class="nom_athlete">
                     <span>Nom</span>
                 </div>
 
                 <div class="genre">
                     <span>Genre</span>
-                </div>
-
-                <div class="nom_pays">
-                    <span>Pays</span>
                 </div>
 
                 <div class="medal_type">
@@ -198,6 +199,11 @@ chercher_athletes.addEventListener("click", () => {
             athlete.className = "athlete";
             let name_flag = createFlagWithName(element["country"])
             athlete.innerHTML = `
+                
+                <div class="nom_pays">
+                    ${name_flag}
+                </div>
+            
                 <div class="nom_athlete">
                     <span>${element["name"]}</span>
                 </div>
@@ -206,12 +212,8 @@ chercher_athletes.addEventListener("click", () => {
                     <span>${element["gender"]}</span>
                 </div>
 
-                <div class="nom_pays">
-                    ${name_flag}
-                </div>
-
-                <div class="medal_type">
-                    <span>${element["medal_type"]}</span>
+                <div class="medal_type_grid_discipline">
+                    <span></span>
                 </div>
 
                 <div class="discipline">
@@ -223,6 +225,16 @@ chercher_athletes.addEventListener("click", () => {
                 </div> 
             
             `;
+
+            const medal_type = athlete.querySelector(".medal_type_grid_discipline");
+
+            if (element["medal_type"] === "Gold Medal") {
+                medal_type.classList.add("gold_grid");
+            } else if (element["medal_type"] === "Silver Medal") {
+                medal_type.classList.add("silver_grid");
+            } else {
+                medal_type.classList.add("bronze_grid");
+            }
             
             athletes.appendChild(athlete);
             // Songer à corriger les genres pour l'équitation
