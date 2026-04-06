@@ -319,12 +319,12 @@
     
     .classement_sous .nom_pays span{
         margin-left: 5px;
-        font-size: 18px;
+        font-size: 22px;
         font-weight: bold;
     }
 
     .classement_sous div {
-        font-size: 18px;
+        font-size: 20px;
     }
 
 
@@ -394,4 +394,17 @@
         border-radius: 10px;
         background-color: white;
     } */
+}
+
+
+@media(max-width : 750px) {
+    .classement_sous .nom_pays span{
+        margin-left: 5px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .classement_sous div {
+        font-size: 18px;
+    }
 }
