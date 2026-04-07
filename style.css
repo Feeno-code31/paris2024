@@ -39,6 +39,7 @@ body {
     font-size: 130px;
     margin: 20px;
     color: blue;
+    text-shadow: 2px 2px white;
 }
 
 
@@ -47,6 +48,8 @@ body {
     font-size: 130px;
     margin: 20px;
     color: red;
+    text-shadow: 2px 2px white;
+
 }
 
 
@@ -112,7 +115,14 @@ ul li:hover a {
     order: 2;                 
 }
 
-
+.intro_paris2024_decouvre {
+    display: block;
+    width: 100%;
+    color: white;
+    text-shadow: 5px 2px black;
+    font-size: 40px;
+    margin-top: 250px;
+}
 
 
 
@@ -398,6 +408,8 @@ footer > div span {
         text-align: right;
         margin-right: 20px;
         color: white;
+        max-width: max-content;
+        font-size: 40px;
     }
     
 
@@ -470,7 +482,7 @@ footer > div span {
     .paris_2024 .date_2024 h1,
     .paris_2024 .paris h1 {
         display: block;
-        font-size: 80px;
+        font-size: 100px;
         letter-spacing: 8px;
         margin: 0;
     }
@@ -487,6 +499,16 @@ footer > div span {
     .paris_2024_intro span {
         font-size: 20px; 
     } 
+
+
+    .intro_paris2024_decouvre {
+        display: block;
+        width: 100%;
+        color: white;
+        text-shadow: 5px 2px black;
+        font-size: 25px;
+        margin-top: 220px;
+    }
 
     /*--------------------------*/
 
