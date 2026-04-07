@@ -71,6 +71,9 @@
 }
 
 .sites_iconiques div span {
+    display: block;
+    width: 100%;
+    max-width: max-content;
     font-size: 30px;
     word-spacing: 2px;
     text-transform: uppercase;
