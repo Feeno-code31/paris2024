@@ -6,6 +6,7 @@ url = "https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/paris-20
 
 
 def get_disciplines() : 
+    
     data = []
     limit = 100
     offset = 0

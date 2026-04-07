@@ -285,6 +285,8 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        background-color: #f6f3f3;
+        padding: 10px;
     }
 
     .entete_athlete {
@@ -294,25 +296,33 @@
     .athlete {
         display: flex;
         flex-direction: column;
-        border: 1px solid;
+        border: 1px solid rgb(194, 192, 192);
+        border-radius: 10px;
         width: 100%;
-
-    }
-
-    .athlete div {
-        display: flex;
-        border: none;
-        margin: 0;
-        max-width: 100%;
         justify-content: center;
         align-items: center;
-        padding: 0;
+        background-color: white;
     }
 
-    .athlete div span {
+    .athlete .nom_athlete{
+        display: block;
+        width: 100%;
         margin: 0;
-        padding: 0;
+        font-size: 30px;
+        text-align: center;
+
     }
+
+
+    .flag_icone {
+        display: block;
+        padding: 15px;
+    }
+
+    .nom_pays {
+        width: 70%;
+    }
+    
 
 
 }
