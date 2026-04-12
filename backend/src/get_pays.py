@@ -1,0 +1,49 @@
+import requests
+import json
+
+def get_pays() :
+
+    """
+        Retourne un dictionnaire ayant comme clé un pays 
+        et comme valeur un dictionnaire contenant comme clé un type de médaille 
+        et comme valeur le nombre de médailles de ce type remporté par ce pays
+    """
+
+    url = "https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/paris-2024-results-medals-oly-eng/records"
+    limit = 100
+    offset = 0
+    all_data = []
+    while True :
+        params = {
+            "select" : "country, medal_type",
+            "limit" : limit,
+            "offset" : offset
+        }
+
+        try :
+            response = requests.get(url, params=params)
+            if response.status_code != 200 : 
+                print("Erreur")
+                exit()
+            
+            data = response.json()["results"]
+            if not data : 
+                break 
+            all_data.extend(data)
+            offset += limit  
+
+        except requests.exceptions.ConnectionError :
+            print("Erreur de connexion !")
+            exit()
+
+
+    dict_pays_medal = dict()
+    if(all_data) :
+        for elem in all_data :
+            country = elem["country"] 
+            if country not in dict_pays_medal :
+                dict_pays_medal[country] = {"Gold Medal" : 0, "Silver Medal": 0, "Bronze Medal" : 0}
+            medal_type = elem["medal_type"]
+            dict_pays_medal[country][medal_type] += 1
+
+    return dict_pays_medal
