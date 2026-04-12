@@ -7,6 +7,9 @@ url = "https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/paris-20
 data = []
 
 def get_athletes_pays_medal(pays:str, medaille:str) : 
+    """
+        Récupère les athlètes en fonction du pays et de la médaille
+    """
     global data
     limit = 100
     offset = 0

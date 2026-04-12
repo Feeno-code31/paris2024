@@ -7,6 +7,9 @@ url = "https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/paris-20
 
 
 def get_athletes_discipline(discipline: str) : 
+    """
+        Récupère tous les athlètes de cette discipline
+    """
     data = []
     limit = 100
     offset = 0

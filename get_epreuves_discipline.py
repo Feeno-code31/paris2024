@@ -7,6 +7,9 @@ url = "https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/paris-20
 
 
 def get_epreuves_discipline(discipline: str) : 
+    """
+        Récupère toutes les épreuves sans doublons en fonction de la discipline passée en paramètre
+    """
     data = []
     limit = 100
     offset = 0

@@ -2,6 +2,13 @@ import requests
 import json
 
 def get_pays() :
+
+    """
+        Retourne un dictionnaire ayant comme clé un pays 
+        et comme valeur un dictionnaire contenant comme clé un type de médaille 
+        et comme valeur le nombre de médailles de ce type remporté par ce pays
+    """
+
     url = "https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/paris-2024-results-medals-oly-eng/records"
     limit = 100
     offset = 0
@@ -40,5 +47,3 @@ def get_pays() :
             dict_pays_medal[country][medal_type] += 1
 
     return dict_pays_medal
-
-all_data_pays = get_pays()

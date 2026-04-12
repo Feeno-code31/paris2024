@@ -8,6 +8,9 @@ url = "https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/paris-20
 
 
 def get_sites() : 
+    """
+        Récupère tous les sites (nom du site et sports) sans doublons où se sont déroulés des épreuves des JO 2024
+    """
     data = []
     limit = 100
     offset = 0
@@ -46,6 +49,9 @@ def get_sites() :
 
 
 def get_sites_names() : 
+    """
+        Récupère le nom des sites
+    """
     data = get_sites()
     return [{"nom_site" : site["nom_site"]} for site in data]
 
