@@ -1,15 +1,15 @@
 from fastapi import FastAPI, Query
 from pydantic import BaseModel, Field
-from get_athletes_pays_medal import get_athletes_pays_medal
-from get_athletes_disciplines import get_athletes_discipline
-from get_sites import get_sites, get_sites_names
-from get_pays import get_pays
-from get_disciplines import get_disciplines
+from src.get_athletes_pays_medal import get_athletes_pays_medal
+from src.get_athletes_disciplines import get_athletes_discipline
+from src.get_sites import get_sites, get_sites_names
+from src.get_pays import get_pays
+from src.get_disciplines import get_disciplines
 from fastapi.responses import FileResponse
-from get_epreuves_discipline import get_epreuves_discipline
-from get_athletes_discipline_epreuve import get_athletes_discipline_epreuve
-from get_athletes_discipline_epreuve_medaille import get_athletes_discipline_epreuve_medaille
-from get_athletes_discipline_medaille import get_athletes_discipline_medaille
+from src.get_epreuves_discipline import get_epreuves_discipline
+from src.get_athletes_discipline_epreuve import get_athletes_discipline_epreuve
+from src.get_athletes_discipline_epreuve_medaille import get_athletes_discipline_epreuve_medaille
+from src.get_athletes_discipline_medaille import get_athletes_discipline_medaille
 from fastapi.middleware.cors import CORSMiddleware
 
 

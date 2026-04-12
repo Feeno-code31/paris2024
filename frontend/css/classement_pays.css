@@ -1,0 +1,412 @@
+
+/*------------------------------------------------------------*/
+
+
+.tab_medailles_presentation {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    background-color: #f6f3f3;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/3f/Medailles-olympiques-Paris2024.jpg);
+}
+
+.image_medal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_medal img {
+    display: block;
+    max-width: 100%;
+}
+
+.classement_description {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    padding: 10px 30px;
+    text-align: left;
+    color: black;
+    background-color: beige;
+    margin: 30px;
+}
+
+.classement_description h1 {
+    font-size: 50px;
+    word-spacing: 2px;
+}
+
+.classement_description p {
+    font-size: 20px;
+}
+
+.classement_description p a {
+    text-decoration: none;
+    color: white;
+}
+
+.redirection_classement {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.redirection_classement:hover {
+    background-color: rgb(40, 40, 39);
+}
+
+
+
+/*------------------------------------*/
+
+.medailles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin: 20px 0 20px 0;
+}
+
+.medaille {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 20px;
+    color: white;
+    text-align: left;
+}
+
+.medaille p {
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 0 0 10px;
+}
+
+#gold_medal {
+    background-image: url("../assets/gold_medal_olympics_paris_2024.jpg");
+}
+
+#silver_medal {
+    background-image: url("../assets/silver\ medal.jpg");
+}
+
+#bronze_medal {
+    background-image: url("../assets/2024-Paris-Summer-Olympics-bronze-medal.jpg");
+}
+
+#bronze_medal, #gold_medal, #silver_medal {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*-----------------------------------------------*/
+.classement {
+    display: block;
+    justify-content: space-between;
+    margin: 0 15%;
+}
+
+
+.classement_sous, .classement_sous_header{
+    display: grid;
+    grid-template-columns: 15% 40% 15% 15% 15%;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    font-size: 25px;
+}
+
+
+
+.classement_sous:hover {
+    background-color: rgb(226, 240, 252);
+}
+
+
+.classement_sous_header{
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    background-color: rgb(223, 230, 230);
+}
+
+.nom_pays {
+    text-align: left;
+    padding: 10px;
+}
+
+.nom_pays_tab {
+    margin-left: 1em;
+}
+
+.flag_icone {
+    display: block;
+    padding: 10px;
+}
+
+.nb_gold_medals,
+.nb_silver_medals,
+.nb_bronze_medals,
+.numero_pays {
+    display: block;
+    text-align: center;
+    /* width: 100%; */
+    padding: 10px;
+}
+
+/* .numero_pays {
+    width: 50%;
+} */
+
+.nb_gold_medals {
+    /* margin-left: 100px; */
+    color: #FFD700;
+}
+
+.nb_bronze_medals:hover, .nb_gold_medals:hover, .nb_silver_medals:hover {
+    background-color: black;
+}
+
+.nb_silver_medals {
+    color: #adadad;
+}
+
+.nb_bronze_medals {
+    color: #CD7F32;
+}
+
+
+
+
+
+/* --------------------------------------------------------------------- */
+
+/* -------------------------------------------*/
+
+/* .pays_details {
+    margin: 0 25%;
+    background: #ffaa00;
+    background: linear-gradient(304deg, rgba(255, 170, 0, 1) 50%, rgba(242, 192, 12, 1) 61%, rgba(237, 210, 135, 1) 100%);
+    padding: 20px;
+    border-radius: 0px;
+}
+
+.info_pays_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.pays_stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 0 10px;
+}
+
+.or, .argent, .bronze {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.filtre_medailles {
+    display: block;
+    background-color: #ccc;
+    border-bottom: 2px solid black;
+    margin-bottom: 0;
+}
+
+.choix_filtre_medailles {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: #ccc;
+    margin: 10px 10px 20px 10px;
+}
+
+.section_medailles_filtre {
+    display: block;
+    margin: 0;
+    background-color: #ccc;
+    border: 1px solid;
+    padding: 20px;
+}
+
+.medaille_filtre_css {
+    display: block;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: white;
+} */
+
+
+@media (max-width : 768px) {
+    /*------------------------------------------------------------*/
+
+    .tab_medailles_presentation {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        border: none;
+        border-bottom: 5px solid black;
+        padding: 20px;
+        background: none;
+        background-color: aliceblue;
+    }    
+
+    .classement_description {
+        padding: 15px 5px;
+        color: black;
+        margin: 0
+    }
+
+    .classement_description h1 {
+        font-size: 40px;
+    }
+
+    /* .classement_description p {
+        font-size: 22px;
+    }  */
+
+
+    .redirection_classement {
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    /*------------------------------------*/
+
+    /*-----------------------------------------------*/
+    .classement {
+        display: block;
+        margin: 0 2.5%;
+    }
+
+    .classement_sous, .classement_sous_header{
+        display: grid;
+        grid-template-columns: 10% 60% 10% 10% 10%;
+        gap: 0;
+    }
+
+
+    .classement_sous div, .classement_sous_header div {
+        display: block;
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    
+    .classement_sous .nom_pays span{
+        margin-left: 5px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .classement_sous div {
+        font-size: 20px;
+    }
+
+
+
+
+    /* -------------------------------------------*/
+
+    /* .pays_details {
+        margin: 0 25%;
+        background: #ffaa00;
+        background: linear-gradient(304deg, rgba(255, 170, 0, 1) 50%, rgba(242, 192, 12, 1) 61%, rgba(237, 210, 135, 1) 100%);
+        padding: 20px;
+        border-radius: 0px;
+    }
+
+    .info_pays_details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    } */
+
+    /* .pays_stats {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        margin: 0 10px;
+    }
+
+    .or, .argent, .bronze {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid;
+        width: 100%;
+        border-radius: 10px;
+        background-color: white;
+    } */
+
+    /* .filtre_medailles {
+        display: block;
+        background-color: #ccc;
+        border-bottom: 2px solid black;
+        margin-bottom: 0;
+    }
+
+    .choix_filtre_medailles {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        background-color: #ccc;
+        margin: 10px 10px 20px 10px;
+    }
+
+    .section_medailles_filtre {
+        display: block;
+        margin: 0;
+        background-color: #ccc;
+        border: 1px solid;
+        padding: 20px;
+    }
+
+    .medaille_filtre_css {
+        display: block;
+        padding: 10px;
+        border: 1px solid;
+        border-radius: 10px;
+        background-color: white;
+    } */
+}
+
+
+@media(max-width : 750px) {
+    .classement_sous .nom_pays span{
+        margin-left: 5px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .classement_sous div {
+        font-size: 18px;
+    }
+}
